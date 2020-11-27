@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Bold.ttf">
+            <string>Quicksand-Bold</string>
+        </array>
+        <array key="SF-Pro-Text-Bold.otf">
+            <string>SFProText-Bold</string>
+        </array>
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="detailSinopsisCell" id="gTV-IL-0wX" customClass="detailSinopsisCell" customModule="Lenna" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="273" height="386"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="273" height="386"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEm-Hv-cJ8">
+                        <rect key="frame" x="10" y="10" width="263" height="366"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pemain:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyn-cX-Kdv">
+                                <rect key="frame" x="10" y="70" width="243" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="gbJ-14-DuK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="15"/>
+                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ellen Page, Sam Keeley, Tom Vaughan-Lawlor" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVr-Sv-fEn">
+                                <rect key="frame" x="10" y="87" width="243" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="g5D-99-yzq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
+                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinopsis:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBy-EK-esh">
+                                <rect key="frame" x="10" y="142" width="243" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="hp4-3D-PYf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="15"/>
+                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jam Tayang:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvc-Lo-9AW">
+                                <rect key="frame" x="10" y="10" width="243" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="VXw-pc-qSZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="15"/>
+                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Mqc-cZ-GIG">
+                                <rect key="frame" x="10" y="30" width="243" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3NN-8k-91w"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qOL-4C-RNL">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sNG-nt-bz8">
+                                <rect key="frame" x="10" y="162" width="243" height="194"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BH-ES-hbt">
+                                <rect key="frame" x="10" y="265" width="243" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.52941176469999995" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="SfQ-ma-CNy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="16"/>
+                                <state key="normal" title="Pesan">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3BH-ES-hbt" secondAttribute="trailing" constant="10" id="0BR-dj-Yg0"/>
+                            <constraint firstItem="3BH-ES-hbt" firstAttribute="leading" secondItem="fEm-Hv-cJ8" secondAttribute="leading" constant="10" id="4Wa-oV-5Kq"/>
+                            <constraint firstAttribute="trailing" secondItem="hvc-Lo-9AW" secondAttribute="trailing" constant="10" id="4xO-GD-Yxd"/>
+                            <constraint firstAttribute="trailing" secondItem="sNG-nt-bz8" secondAttribute="trailing" constant="10" id="BF0-IW-HFV"/>
+                            <constraint firstAttribute="trailing" secondItem="Mqc-cZ-GIG" secondAttribute="trailing" constant="10" id="H0S-Pw-G2W"/>
+                            <constraint firstItem="aBy-EK-esh" firstAttribute="leading" secondItem="fEm-Hv-cJ8" secondAttribute="leading" constant="10" id="JkC-3U-idW"/>
+                            <constraint firstAttribute="trailing" secondItem="mVr-Sv-fEn" secondAttribute="trailing" constant="10" id="KqU-f0-KaK"/>
+                            <constraint firstAttribute="trailing" secondItem="tyn-cX-Kdv" secondAttribute="trailing" constant="10" id="KsS-8X-kI2"/>
+                            <constraint firstItem="Mqc-cZ-GIG" firstAttribute="top" secondItem="hvc-Lo-9AW" secondAttribute="bottom" id="L8l-Wr-nLb"/>
+                            <constraint firstItem="tyn-cX-Kdv" firstAttribute="leading" secondItem="fEm-Hv-cJ8" secondAttribute="leading" constant="10" id="MK8-8A-KsO"/>
+                            <constraint firstAttribute="bottom" secondItem="sNG-nt-bz8" secondAttribute="bottom" constant="10" id="PPs-e3-FkF"/>
+                            <constraint firstItem="sNG-nt-bz8" firstAttribute="top" secondItem="aBy-EK-esh" secondAttribute="bottom" constant="5" id="X9S-Qk-hT7"/>
+                            <constraint firstAttribute="bottom" secondItem="3BH-ES-hbt" secondAttribute="bottom" constant="10" id="Xte-jF-zZd"/>
+                            <constraint firstItem="hvc-Lo-9AW" firstAttribute="leading" secondItem="fEm-Hv-cJ8" secondAttribute="leading" constant="10" id="YiJ-uI-jpU"/>
+                            <constraint firstAttribute="trailing" secondItem="aBy-EK-esh" secondAttribute="trailing" constant="10" id="Yv1-Xq-Xpt"/>
+                            <constraint firstItem="hvc-Lo-9AW" firstAttribute="top" secondItem="fEm-Hv-cJ8" secondAttribute="top" constant="10" id="ZOI-Xe-Qu8"/>
+                            <constraint firstItem="mVr-Sv-fEn" firstAttribute="leading" secondItem="fEm-Hv-cJ8" secondAttribute="leading" constant="10" id="fmG-rs-BBU"/>
+                            <constraint firstItem="tyn-cX-Kdv" firstAttribute="top" secondItem="Mqc-cZ-GIG" secondAttribute="bottom" id="hy8-hm-Suo"/>
+                            <constraint firstItem="mVr-Sv-fEn" firstAttribute="top" secondItem="tyn-cX-Kdv" secondAttribute="bottom" constant="-3" id="i91-df-857"/>
+                            <constraint firstItem="Mqc-cZ-GIG" firstAttribute="leading" secondItem="fEm-Hv-cJ8" secondAttribute="leading" constant="10" id="mDM-H0-0xD"/>
+                            <constraint firstItem="sNG-nt-bz8" firstAttribute="leading" secondItem="fEm-Hv-cJ8" secondAttribute="leading" constant="10" id="p1e-KZ-Ecy"/>
+                            <constraint firstItem="aBy-EK-esh" firstAttribute="top" secondItem="mVr-Sv-fEn" secondAttribute="bottom" constant="15" id="wes-OY-i7B"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="3BH-ES-hbt"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fEm-Hv-cJ8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="7jZ-Yz-TBG"/>
+                <constraint firstItem="fEm-Hv-cJ8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="7ng-p8-503"/>
+                <constraint firstAttribute="bottom" secondItem="fEm-Hv-cJ8" secondAttribute="bottom" constant="10" id="DoY-kc-dq3"/>
+                <constraint firstAttribute="trailing" secondItem="fEm-Hv-cJ8" secondAttribute="trailing" id="TWh-9H-MBs"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="273" height="386"/>
+            <connections>
+                <outlet property="btnPesan" destination="3BH-ES-hbt" id="8dS-Jk-7jc"/>
+                <outlet property="collectionTime" destination="Mqc-cZ-GIG" id="r6r-hY-LHR"/>
+                <outlet property="sinopsisLabel" destination="sNG-nt-bz8" id="Tma-R0-l4c"/>
+                <outlet property="startslabel" destination="mVr-Sv-fEn" id="yhq-Ic-Ui4"/>
+            </connections>
+            <point key="canvasLocation" x="81" y="203"/>
+        </collectionViewCell>
+    </objects>
+</document>

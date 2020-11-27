@@ -1,0 +1,1305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A884B7D2722E613A62256276 /* Pods_Lenna_chat_sdk_4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6638E0E762B298C6D4B6A74E /* Pods_Lenna_chat_sdk_4.framework */; };
+		D038F4C9255D3A4300F20AC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F4C8255D3A4300F20AC5 /* AppDelegate.swift */; };
+		D038F4CB255D3A4300F20AC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F4CA255D3A4300F20AC5 /* SceneDelegate.swift */; };
+		D038F4CD255D3A4300F20AC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F4CC255D3A4300F20AC5 /* ViewController.swift */; };
+		D038F4D0255D3A4300F20AC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D038F4CE255D3A4300F20AC5 /* Main.storyboard */; };
+		D038F4D2255D3A4A00F20AC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D038F4D1255D3A4A00F20AC5 /* Assets.xcassets */; };
+		D038F4D5255D3A4A00F20AC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D038F4D3255D3A4A00F20AC5 /* LaunchScreen.storyboard */; };
+		D038F4E0255D3A4B00F20AC5 /* Lenna_chat_sdk_4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F4DF255D3A4B00F20AC5 /* Lenna_chat_sdk_4Tests.swift */; };
+		D038F4EB255D3A4B00F20AC5 /* Lenna_chat_sdk_4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F4EA255D3A4B00F20AC5 /* Lenna_chat_sdk_4UITests.swift */; };
+		D038F565255D3F6700F20AC5 /* ConfirmationCustomAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F4FA255D3F6600F20AC5 /* ConfirmationCustomAlertController.swift */; };
+		D038F566255D3F6700F20AC5 /* CustomAlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F4FB255D3F6600F20AC5 /* CustomAlertService.swift */; };
+		D038F567255D3F6700F20AC5 /* CustomGenderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F4FC255D3F6600F20AC5 /* CustomGenderController.swift */; };
+		D038F568255D3F6700F20AC5 /* CustomDatePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F4FD255D3F6600F20AC5 /* CustomDatePickerController.swift */; };
+		D038F569255D3F6700F20AC5 /* CustomAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F4FE255D3F6600F20AC5 /* CustomAlertController.swift */; };
+		D038F56A255D3F6700F20AC5 /* AJDotLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F500255D3F6600F20AC5 /* AJDotLoadingView.xib */; };
+		D038F56B255D3F6700F20AC5 /* UIDotLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F501255D3F6600F20AC5 /* UIDotLoadingIndicator.swift */; };
+		D038F56C255D3F6700F20AC5 /* AJDotLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F502255D3F6600F20AC5 /* AJDotLoadingView.swift */; };
+		D038F56D255D3F6700F20AC5 /* ExtensionCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F504255D3F6600F20AC5 /* ExtensionCollection.swift */; };
+		D038F56E255D3F6700F20AC5 /* BtnMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F507255D3F6600F20AC5 /* BtnMovie.swift */; };
+		D038F56F255D3F6700F20AC5 /* MessageMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F508255D3F6600F20AC5 /* MessageMovie.swift */; };
+		D038F570255D3F6700F20AC5 /* MoviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F509255D3F6600F20AC5 /* MoviewCell.swift */; };
+		D038F571255D3F6700F20AC5 /* BtnList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F50A255D3F6600F20AC5 /* BtnList.swift */; };
+		D038F572255D3F6700F20AC5 /* BtnMovie.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F50B255D3F6600F20AC5 /* BtnMovie.xib */; };
+		D038F573255D3F6700F20AC5 /* MessageMovie.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F50C255D3F6600F20AC5 /* MessageMovie.xib */; };
+		D038F574255D3F6700F20AC5 /* BtnList.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F50D255D3F6600F20AC5 /* BtnList.xib */; };
+		D038F575255D3F6700F20AC5 /* MoviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F50E255D3F6600F20AC5 /* MoviewCell.xib */; };
+		D038F576255D3F6700F20AC5 /* MessageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F510255D3F6600F20AC5 /* MessageList.swift */; };
+		D038F577255D3F6700F20AC5 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F511255D3F6600F20AC5 /* ListCell.swift */; };
+		D038F578255D3F6700F20AC5 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F512255D3F6600F20AC5 /* ListCell.xib */; };
+		D038F579255D3F6700F20AC5 /* MessageList.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F513255D3F6600F20AC5 /* MessageList.xib */; };
+		D038F57A255D3F6700F20AC5 /* MessageConfirm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F515255D3F6600F20AC5 /* MessageConfirm.swift */; };
+		D038F57B255D3F6700F20AC5 /* MessageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F517255D3F6600F20AC5 /* MessageLoading.swift */; };
+		D038F57C255D3F6700F20AC5 /* QuickButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F519255D3F6600F20AC5 /* QuickButtonCell.swift */; };
+		D038F57D255D3F6700F20AC5 /* QuickButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F51A255D3F6600F20AC5 /* QuickButtonCell.xib */; };
+		D038F57E255D3F6700F20AC5 /* ChatImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F51C255D3F6600F20AC5 /* ChatImage.swift */; };
+		D038F57F255D3F6700F20AC5 /* ChatImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F51D255D3F6600F20AC5 /* ChatImage.xib */; };
+		D038F580255D3F6700F20AC5 /* MessageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F51F255D3F6600F20AC5 /* MessageText.swift */; };
+		D038F581255D3F6700F20AC5 /* MessageText.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F520255D3F6600F20AC5 /* MessageText.xib */; };
+		D038F582255D3F6700F20AC5 /* MessageFromMe.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F521255D3F6600F20AC5 /* MessageFromMe.xib */; };
+		D038F583255D3F6700F20AC5 /* MessageFromMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F522255D3F6600F20AC5 /* MessageFromMe.swift */; };
+		D038F584255D3F6700F20AC5 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F524255D3F6600F20AC5 /* WeatherCell.swift */; };
+		D038F585255D3F6700F20AC5 /* WeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F525255D3F6600F20AC5 /* WeatherCell.xib */; };
+		D038F586255D3F6700F20AC5 /* FormCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F527255D3F6600F20AC5 /* FormCell.xib */; };
+		D038F587255D3F6700F20AC5 /* MessageForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F528255D3F6600F20AC5 /* MessageForm.swift */; };
+		D038F588255D3F6700F20AC5 /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F529255D3F6600F20AC5 /* FormCell.swift */; };
+		D038F589255D3F6700F20AC5 /* SummaryInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F52B255D3F6600F20AC5 /* SummaryInfoCell.xib */; };
+		D038F58A255D3F6700F20AC5 /* SummaryInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F52C255D3F6600F20AC5 /* SummaryInfoCell.swift */; };
+		D038F58B255D3F6700F20AC5 /* SummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F52D255D3F6600F20AC5 /* SummaryCell.swift */; };
+		D038F58C255D3F6700F20AC5 /* SummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F52E255D3F6600F20AC5 /* SummaryCell.xib */; };
+		D038F58D255D3F6700F20AC5 /* CarouselViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F530255D3F6600F20AC5 /* CarouselViewCell.swift */; };
+		D038F58E255D3F6700F20AC5 /* ButtonCarousel.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F531255D3F6600F20AC5 /* ButtonCarousel.xib */; };
+		D038F58F255D3F6700F20AC5 /* MessageCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F532255D3F6600F20AC5 /* MessageCarousel.swift */; };
+		D038F590255D3F6700F20AC5 /* ButtonCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F533255D3F6600F20AC5 /* ButtonCarousel.swift */; };
+		D038F591255D3F6700F20AC5 /* CarouselViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F534255D3F6600F20AC5 /* CarouselViewCell.xib */; };
+		D038F592255D3F6700F20AC5 /* MessageCarousel.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F535255D3F6600F20AC5 /* MessageCarousel.xib */; };
+		D038F593255D3F6700F20AC5 /* MessageHtml.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F537255D3F6600F20AC5 /* MessageHtml.xib */; };
+		D038F594255D3F6700F20AC5 /* MessageHtml.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F538255D3F6700F20AC5 /* MessageHtml.swift */; };
+		D038F595255D3F6700F20AC5 /* MessageGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F53A255D3F6700F20AC5 /* MessageGrid.swift */; };
+		D038F596255D3F6700F20AC5 /* MessageGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F53B255D3F6700F20AC5 /* MessageGridCell.swift */; };
+		D038F597255D3F6700F20AC5 /* MessageGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F53C255D3F6700F20AC5 /* MessageGridCell.xib */; };
+		D038F598255D3F6700F20AC5 /* MessageGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F53D255D3F6700F20AC5 /* MessageGrid.xib */; };
+		D038F599255D3F6800F20AC5 /* detailShowtimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F53F255D3F6700F20AC5 /* detailShowtimeCell.xib */; };
+		D038F59A255D3F6800F20AC5 /* detailShowtimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F540255D3F6700F20AC5 /* detailShowtimeCell.swift */; };
+		D038F59B255D3F6800F20AC5 /* movieTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F541255D3F6700F20AC5 /* movieTimeCell.xib */; };
+		D038F59C255D3F6800F20AC5 /* detailSinopsisCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F542255D3F6700F20AC5 /* detailSinopsisCell.xib */; };
+		D038F59D255D3F6800F20AC5 /* detailSinopsisCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F543255D3F6700F20AC5 /* detailSinopsisCell.swift */; };
+		D038F59E255D3F6800F20AC5 /* movieTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F544255D3F6700F20AC5 /* movieTimeCell.swift */; };
+		D038F59F255D3F6800F20AC5 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F546255D3F6700F20AC5 /* UserRepository.swift */; };
+		D038F5A0255D3F6800F20AC5 /* DecryptAes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F547255D3F6700F20AC5 /* DecryptAes.swift */; };
+		D038F5A1255D3F6800F20AC5 /* GenerateId.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F548255D3F6700F20AC5 /* GenerateId.swift */; };
+		D038F5A2255D3F6800F20AC5 /* Chats.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F549255D3F6700F20AC5 /* Chats.swift */; };
+		D038F5A3255D3F6800F20AC5 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F54A255D3F6700F20AC5 /* CustomImageView.swift */; };
+		D038F5A4255D3F6800F20AC5 /* EncryptAes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F54B255D3F6700F20AC5 /* EncryptAes.swift */; };
+		D038F5A5255D3F6800F20AC5 /* Constan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F54C255D3F6700F20AC5 /* Constan.swift */; };
+		D038F5A6255D3F6800F20AC5 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F54E255D3F6700F20AC5 /* APIManager.swift */; };
+		D038F5A7255D3F6800F20AC5 /* Regist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F54F255D3F6700F20AC5 /* Regist.swift */; };
+		D038F5A8255D3F6800F20AC5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F551255D3F6700F20AC5 /* ChatViewController.swift */; };
+		D038F5A9255D3F6800F20AC5 /* ChatActivity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D038F552255D3F6700F20AC5 /* ChatActivity.storyboard */; };
+		D038F5AA255D3F6800F20AC5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F554255D3F6700F20AC5 /* Message.swift */; };
+		D038F5AB255D3F6800F20AC5 /* NotifData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F555255D3F6700F20AC5 /* NotifData.swift */; };
+		D038F5AC255D3F6800F20AC5 /* MessageTextType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F556255D3F6700F20AC5 /* MessageTextType.swift */; };
+		D038F5AD255D3F6800F20AC5 /* MessageInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F557255D3F6700F20AC5 /* MessageInput.swift */; };
+		D038F5AE255D3F6800F20AC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D038F55A255D3F6700F20AC5 /* Assets.xcassets */; };
+		D038F5AF255D3F6800F20AC5 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D038F55C255D3F6700F20AC5 /* Quicksand-Bold.ttf */; };
+		D038F5B0255D3F6800F20AC5 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D038F55D255D3F6700F20AC5 /* Quicksand-Medium.ttf */; };
+		D038F5B1255D3F6800F20AC5 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D038F55E255D3F6700F20AC5 /* Quicksand-Regular.ttf */; };
+		D038F5B2255D3F6800F20AC5 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D038F55F255D3F6700F20AC5 /* SF-Pro-Text-Regular.otf */; };
+		D038F5B3255D3F6800F20AC5 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D038F560255D3F6700F20AC5 /* Quicksand-Light.ttf */; };
+		D038F5B4255D3F6800F20AC5 /* dot_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = D038F562255D3F6700F20AC5 /* dot_loading.json */; };
+		D038F5B5255D3F6800F20AC5 /* UIViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F564255D3F6700F20AC5 /* UIViewHelper.swift */; };
+		D0C91BB1256F61DA00FCF230 /* GPSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C91BB0256F61DA00FCF230 /* GPSController.swift */; };
+		D69F96FA88B20DADA5F4DCF8 /* Pods_Lenna_chat_sdk_4_Lenna_chat_sdk_4UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20185DC61419A50A6C5E754D /* Pods_Lenna_chat_sdk_4_Lenna_chat_sdk_4UITests.framework */; };
+		E461363BA33E90CB6EA89E04 /* Pods_Lenna_chat_sdk_4Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF2AA896A8EA9CC258D1FE7 /* Pods_Lenna_chat_sdk_4Tests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D038F4DC255D3A4B00F20AC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D038F4BD255D3A4300F20AC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D038F4C4255D3A4300F20AC5;
+			remoteInfo = Lenna_chat_sdk_4;
+		};
+		D038F4E7255D3A4B00F20AC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D038F4BD255D3A4300F20AC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D038F4C4255D3A4300F20AC5;
+			remoteInfo = Lenna_chat_sdk_4;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04AA293DB4FC13974A0274DC /* Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests.release.xcconfig"; path = "Target Support Files/Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests/Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests.release.xcconfig"; sourceTree = "<group>"; };
+		0DF2AA896A8EA9CC258D1FE7 /* Pods_Lenna_chat_sdk_4Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lenna_chat_sdk_4Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E7114FFAA846E6A72A8798A /* Pods-Lenna_chat_sdk_4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lenna_chat_sdk_4.debug.xcconfig"; path = "Target Support Files/Pods-Lenna_chat_sdk_4/Pods-Lenna_chat_sdk_4.debug.xcconfig"; sourceTree = "<group>"; };
+		20185DC61419A50A6C5E754D /* Pods_Lenna_chat_sdk_4_Lenna_chat_sdk_4UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lenna_chat_sdk_4_Lenna_chat_sdk_4UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63BBA9447C6BBE8B29AB6CFA /* Pods-Lenna_chat_sdk_4Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lenna_chat_sdk_4Tests.release.xcconfig"; path = "Target Support Files/Pods-Lenna_chat_sdk_4Tests/Pods-Lenna_chat_sdk_4Tests.release.xcconfig"; sourceTree = "<group>"; };
+		6638E0E762B298C6D4B6A74E /* Pods_Lenna_chat_sdk_4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lenna_chat_sdk_4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BD5541D56342B3C3149C3A5 /* Pods-Lenna_chat_sdk_4Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lenna_chat_sdk_4Tests.debug.xcconfig"; path = "Target Support Files/Pods-Lenna_chat_sdk_4Tests/Pods-Lenna_chat_sdk_4Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D038F4C5255D3A4300F20AC5 /* Lenna_chat_sdk_4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lenna_chat_sdk_4.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D038F4C8255D3A4300F20AC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D038F4CA255D3A4300F20AC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D038F4CC255D3A4300F20AC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D038F4CF255D3A4300F20AC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D038F4D1255D3A4A00F20AC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D038F4D4255D3A4A00F20AC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D038F4D6255D3A4A00F20AC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D038F4DB255D3A4B00F20AC5 /* Lenna_chat_sdk_4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lenna_chat_sdk_4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D038F4DF255D3A4B00F20AC5 /* Lenna_chat_sdk_4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lenna_chat_sdk_4Tests.swift; sourceTree = "<group>"; };
+		D038F4E1255D3A4B00F20AC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D038F4E6255D3A4B00F20AC5 /* Lenna_chat_sdk_4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lenna_chat_sdk_4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D038F4EA255D3A4B00F20AC5 /* Lenna_chat_sdk_4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lenna_chat_sdk_4UITests.swift; sourceTree = "<group>"; };
+		D038F4EC255D3A4B00F20AC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D038F4FA255D3F6600F20AC5 /* ConfirmationCustomAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationCustomAlertController.swift; sourceTree = "<group>"; };
+		D038F4FB255D3F6600F20AC5 /* CustomAlertService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlertService.swift; sourceTree = "<group>"; };
+		D038F4FC255D3F6600F20AC5 /* CustomGenderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomGenderController.swift; sourceTree = "<group>"; };
+		D038F4FD255D3F6600F20AC5 /* CustomDatePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDatePickerController.swift; sourceTree = "<group>"; };
+		D038F4FE255D3F6600F20AC5 /* CustomAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlertController.swift; sourceTree = "<group>"; };
+		D038F500255D3F6600F20AC5 /* AJDotLoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AJDotLoadingView.xib; sourceTree = "<group>"; };
+		D038F501255D3F6600F20AC5 /* UIDotLoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDotLoadingIndicator.swift; sourceTree = "<group>"; };
+		D038F502255D3F6600F20AC5 /* AJDotLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AJDotLoadingView.swift; sourceTree = "<group>"; };
+		D038F504255D3F6600F20AC5 /* ExtensionCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionCollection.swift; sourceTree = "<group>"; };
+		D038F507255D3F6600F20AC5 /* BtnMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtnMovie.swift; sourceTree = "<group>"; };
+		D038F508255D3F6600F20AC5 /* MessageMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageMovie.swift; sourceTree = "<group>"; };
+		D038F509255D3F6600F20AC5 /* MoviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviewCell.swift; sourceTree = "<group>"; };
+		D038F50A255D3F6600F20AC5 /* BtnList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtnList.swift; sourceTree = "<group>"; };
+		D038F50B255D3F6600F20AC5 /* BtnMovie.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BtnMovie.xib; sourceTree = "<group>"; };
+		D038F50C255D3F6600F20AC5 /* MessageMovie.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageMovie.xib; sourceTree = "<group>"; };
+		D038F50D255D3F6600F20AC5 /* BtnList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BtnList.xib; sourceTree = "<group>"; };
+		D038F50E255D3F6600F20AC5 /* MoviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoviewCell.xib; sourceTree = "<group>"; };
+		D038F510255D3F6600F20AC5 /* MessageList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageList.swift; sourceTree = "<group>"; };
+		D038F511255D3F6600F20AC5 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		D038F512255D3F6600F20AC5 /* ListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
+		D038F513255D3F6600F20AC5 /* MessageList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageList.xib; sourceTree = "<group>"; };
+		D038F515255D3F6600F20AC5 /* MessageConfirm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageConfirm.swift; sourceTree = "<group>"; };
+		D038F517255D3F6600F20AC5 /* MessageLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageLoading.swift; sourceTree = "<group>"; };
+		D038F519255D3F6600F20AC5 /* QuickButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickButtonCell.swift; sourceTree = "<group>"; };
+		D038F51A255D3F6600F20AC5 /* QuickButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuickButtonCell.xib; sourceTree = "<group>"; };
+		D038F51C255D3F6600F20AC5 /* ChatImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatImage.swift; sourceTree = "<group>"; };
+		D038F51D255D3F6600F20AC5 /* ChatImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatImage.xib; sourceTree = "<group>"; };
+		D038F51F255D3F6600F20AC5 /* MessageText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageText.swift; sourceTree = "<group>"; };
+		D038F520255D3F6600F20AC5 /* MessageText.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageText.xib; sourceTree = "<group>"; };
+		D038F521255D3F6600F20AC5 /* MessageFromMe.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageFromMe.xib; sourceTree = "<group>"; };
+		D038F522255D3F6600F20AC5 /* MessageFromMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageFromMe.swift; sourceTree = "<group>"; };
+		D038F524255D3F6600F20AC5 /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		D038F525255D3F6600F20AC5 /* WeatherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherCell.xib; sourceTree = "<group>"; };
+		D038F527255D3F6600F20AC5 /* FormCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormCell.xib; sourceTree = "<group>"; };
+		D038F528255D3F6600F20AC5 /* MessageForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageForm.swift; sourceTree = "<group>"; };
+		D038F529255D3F6600F20AC5 /* FormCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
+		D038F52B255D3F6600F20AC5 /* SummaryInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummaryInfoCell.xib; sourceTree = "<group>"; };
+		D038F52C255D3F6600F20AC5 /* SummaryInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryInfoCell.swift; sourceTree = "<group>"; };
+		D038F52D255D3F6600F20AC5 /* SummaryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryCell.swift; sourceTree = "<group>"; };
+		D038F52E255D3F6600F20AC5 /* SummaryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummaryCell.xib; sourceTree = "<group>"; };
+		D038F530255D3F6600F20AC5 /* CarouselViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselViewCell.swift; sourceTree = "<group>"; };
+		D038F531255D3F6600F20AC5 /* ButtonCarousel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCarousel.xib; sourceTree = "<group>"; };
+		D038F532255D3F6600F20AC5 /* MessageCarousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCarousel.swift; sourceTree = "<group>"; };
+		D038F533255D3F6600F20AC5 /* ButtonCarousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCarousel.swift; sourceTree = "<group>"; };
+		D038F534255D3F6600F20AC5 /* CarouselViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarouselViewCell.xib; sourceTree = "<group>"; };
+		D038F535255D3F6600F20AC5 /* MessageCarousel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCarousel.xib; sourceTree = "<group>"; };
+		D038F537255D3F6600F20AC5 /* MessageHtml.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageHtml.xib; sourceTree = "<group>"; };
+		D038F538255D3F6700F20AC5 /* MessageHtml.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageHtml.swift; sourceTree = "<group>"; };
+		D038F53A255D3F6700F20AC5 /* MessageGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageGrid.swift; sourceTree = "<group>"; };
+		D038F53B255D3F6700F20AC5 /* MessageGridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageGridCell.swift; sourceTree = "<group>"; };
+		D038F53C255D3F6700F20AC5 /* MessageGridCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageGridCell.xib; sourceTree = "<group>"; };
+		D038F53D255D3F6700F20AC5 /* MessageGrid.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageGrid.xib; sourceTree = "<group>"; };
+		D038F53F255D3F6700F20AC5 /* detailShowtimeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = detailShowtimeCell.xib; sourceTree = "<group>"; };
+		D038F540255D3F6700F20AC5 /* detailShowtimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailShowtimeCell.swift; sourceTree = "<group>"; };
+		D038F541255D3F6700F20AC5 /* movieTimeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = movieTimeCell.xib; sourceTree = "<group>"; };
+		D038F542255D3F6700F20AC5 /* detailSinopsisCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = detailSinopsisCell.xib; sourceTree = "<group>"; };
+		D038F543255D3F6700F20AC5 /* detailSinopsisCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailSinopsisCell.swift; sourceTree = "<group>"; };
+		D038F544255D3F6700F20AC5 /* movieTimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = movieTimeCell.swift; sourceTree = "<group>"; };
+		D038F546255D3F6700F20AC5 /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		D038F547255D3F6700F20AC5 /* DecryptAes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecryptAes.swift; sourceTree = "<group>"; };
+		D038F548255D3F6700F20AC5 /* GenerateId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateId.swift; sourceTree = "<group>"; };
+		D038F549255D3F6700F20AC5 /* Chats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chats.swift; sourceTree = "<group>"; };
+		D038F54A255D3F6700F20AC5 /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		D038F54B255D3F6700F20AC5 /* EncryptAes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptAes.swift; sourceTree = "<group>"; };
+		D038F54C255D3F6700F20AC5 /* Constan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constan.swift; sourceTree = "<group>"; };
+		D038F54E255D3F6700F20AC5 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		D038F54F255D3F6700F20AC5 /* Regist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regist.swift; sourceTree = "<group>"; };
+		D038F551255D3F6700F20AC5 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		D038F552255D3F6700F20AC5 /* ChatActivity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChatActivity.storyboard; sourceTree = "<group>"; };
+		D038F554255D3F6700F20AC5 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		D038F555255D3F6700F20AC5 /* NotifData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifData.swift; sourceTree = "<group>"; };
+		D038F556255D3F6700F20AC5 /* MessageTextType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTextType.swift; sourceTree = "<group>"; };
+		D038F557255D3F6700F20AC5 /* MessageInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageInput.swift; sourceTree = "<group>"; };
+		D038F55A255D3F6700F20AC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D038F55C255D3F6700F20AC5 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		D038F55D255D3F6700F20AC5 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		D038F55E255D3F6700F20AC5 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		D038F55F255D3F6700F20AC5 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		D038F560255D3F6700F20AC5 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
+		D038F562255D3F6700F20AC5 /* dot_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dot_loading.json; sourceTree = "<group>"; };
+		D038F564255D3F6700F20AC5 /* UIViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewHelper.swift; sourceTree = "<group>"; };
+		D0C91BB0256F61DA00FCF230 /* GPSController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSController.swift; sourceTree = "<group>"; };
+		E86FF23572AFF104E5D24E8A /* Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests.debug.xcconfig"; path = "Target Support Files/Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests/Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F053AA19E4E7C23675244078 /* Pods-Lenna_chat_sdk_4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lenna_chat_sdk_4.release.xcconfig"; path = "Target Support Files/Pods-Lenna_chat_sdk_4/Pods-Lenna_chat_sdk_4.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D038F4C2255D3A4300F20AC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A884B7D2722E613A62256276 /* Pods_Lenna_chat_sdk_4.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D038F4D8255D3A4B00F20AC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E461363BA33E90CB6EA89E04 /* Pods_Lenna_chat_sdk_4Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D038F4E3255D3A4B00F20AC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D69F96FA88B20DADA5F4DCF8 /* Pods_Lenna_chat_sdk_4_Lenna_chat_sdk_4UITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5E27C34F4771614F52330103 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6638E0E762B298C6D4B6A74E /* Pods_Lenna_chat_sdk_4.framework */,
+				20185DC61419A50A6C5E754D /* Pods_Lenna_chat_sdk_4_Lenna_chat_sdk_4UITests.framework */,
+				0DF2AA896A8EA9CC258D1FE7 /* Pods_Lenna_chat_sdk_4Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C6BE0E8BCA752E930C744203 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E7114FFAA846E6A72A8798A /* Pods-Lenna_chat_sdk_4.debug.xcconfig */,
+				F053AA19E4E7C23675244078 /* Pods-Lenna_chat_sdk_4.release.xcconfig */,
+				E86FF23572AFF104E5D24E8A /* Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests.debug.xcconfig */,
+				04AA293DB4FC13974A0274DC /* Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests.release.xcconfig */,
+				8BD5541D56342B3C3149C3A5 /* Pods-Lenna_chat_sdk_4Tests.debug.xcconfig */,
+				63BBA9447C6BBE8B29AB6CFA /* Pods-Lenna_chat_sdk_4Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D038F4BC255D3A4300F20AC5 = {
+			isa = PBXGroup;
+			children = (
+				D038F4C7255D3A4300F20AC5 /* Lenna_chat_sdk_4 */,
+				D038F4DE255D3A4B00F20AC5 /* Lenna_chat_sdk_4Tests */,
+				D038F4E9255D3A4B00F20AC5 /* Lenna_chat_sdk_4UITests */,
+				D038F4C6255D3A4300F20AC5 /* Products */,
+				C6BE0E8BCA752E930C744203 /* Pods */,
+				5E27C34F4771614F52330103 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D038F4C6255D3A4300F20AC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D038F4C5255D3A4300F20AC5 /* Lenna_chat_sdk_4.app */,
+				D038F4DB255D3A4B00F20AC5 /* Lenna_chat_sdk_4Tests.xctest */,
+				D038F4E6255D3A4B00F20AC5 /* Lenna_chat_sdk_4UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D038F4C7255D3A4300F20AC5 /* Lenna_chat_sdk_4 */ = {
+			isa = PBXGroup;
+			children = (
+				D038F4F8255D3F6600F20AC5 /* Lenna_chat_sdk */,
+				D038F4C8255D3A4300F20AC5 /* AppDelegate.swift */,
+				D038F4CA255D3A4300F20AC5 /* SceneDelegate.swift */,
+				D038F4CC255D3A4300F20AC5 /* ViewController.swift */,
+				D038F4CE255D3A4300F20AC5 /* Main.storyboard */,
+				D038F4D1255D3A4A00F20AC5 /* Assets.xcassets */,
+				D038F4D3255D3A4A00F20AC5 /* LaunchScreen.storyboard */,
+				D038F4D6255D3A4A00F20AC5 /* Info.plist */,
+			);
+			path = Lenna_chat_sdk_4;
+			sourceTree = "<group>";
+		};
+		D038F4DE255D3A4B00F20AC5 /* Lenna_chat_sdk_4Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D038F4DF255D3A4B00F20AC5 /* Lenna_chat_sdk_4Tests.swift */,
+				D038F4E1255D3A4B00F20AC5 /* Info.plist */,
+			);
+			path = Lenna_chat_sdk_4Tests;
+			sourceTree = "<group>";
+		};
+		D038F4E9255D3A4B00F20AC5 /* Lenna_chat_sdk_4UITests */ = {
+			isa = PBXGroup;
+			children = (
+				D038F4EA255D3A4B00F20AC5 /* Lenna_chat_sdk_4UITests.swift */,
+				D038F4EC255D3A4B00F20AC5 /* Info.plist */,
+			);
+			path = Lenna_chat_sdk_4UITests;
+			sourceTree = "<group>";
+		};
+		D038F4F8255D3F6600F20AC5 /* Lenna_chat_sdk */ = {
+			isa = PBXGroup;
+			children = (
+				D038F4F9255D3F6600F20AC5 /* CustomAlert */,
+				D038F4FF255D3F6600F20AC5 /* core */,
+				D038F503255D3F6600F20AC5 /* Extension */,
+				D038F505255D3F6600F20AC5 /* Chat */,
+				D038F545255D3F6700F20AC5 /* Util */,
+				D038F54D255D3F6700F20AC5 /* Network */,
+				D038F550255D3F6700F20AC5 /* Controller */,
+				D038F553255D3F6700F20AC5 /* Model */,
+				D038F558255D3F6700F20AC5 /* View */,
+				D038F559255D3F6700F20AC5 /* Assets */,
+				D038F563255D3F6700F20AC5 /* helper */,
+			);
+			path = Lenna_chat_sdk;
+			sourceTree = "<group>";
+		};
+		D038F4F9255D3F6600F20AC5 /* CustomAlert */ = {
+			isa = PBXGroup;
+			children = (
+				D038F4FA255D3F6600F20AC5 /* ConfirmationCustomAlertController.swift */,
+				D038F4FB255D3F6600F20AC5 /* CustomAlertService.swift */,
+				D038F4FC255D3F6600F20AC5 /* CustomGenderController.swift */,
+				D038F4FD255D3F6600F20AC5 /* CustomDatePickerController.swift */,
+				D038F4FE255D3F6600F20AC5 /* CustomAlertController.swift */,
+			);
+			path = CustomAlert;
+			sourceTree = "<group>";
+		};
+		D038F4FF255D3F6600F20AC5 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				D038F500255D3F6600F20AC5 /* AJDotLoadingView.xib */,
+				D038F501255D3F6600F20AC5 /* UIDotLoadingIndicator.swift */,
+				D038F502255D3F6600F20AC5 /* AJDotLoadingView.swift */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		D038F503255D3F6600F20AC5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D038F504255D3F6600F20AC5 /* ExtensionCollection.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D038F505255D3F6600F20AC5 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				D038F506255D3F6600F20AC5 /* messageMovie */,
+				D038F50F255D3F6600F20AC5 /* messageList */,
+				D038F514255D3F6600F20AC5 /* messageConfirm */,
+				D038F516255D3F6600F20AC5 /* messageLoading */,
+				D038F518255D3F6600F20AC5 /* quickButton */,
+				D038F51B255D3F6600F20AC5 /* messageImage */,
+				D038F51E255D3F6600F20AC5 /* messageText */,
+				D038F523255D3F6600F20AC5 /* messageWeather */,
+				D038F526255D3F6600F20AC5 /* messageForm */,
+				D038F52A255D3F6600F20AC5 /* messageSummary */,
+				D038F52F255D3F6600F20AC5 /* messageCarousel */,
+				D038F536255D3F6600F20AC5 /* messageHtml */,
+				D038F539255D3F6700F20AC5 /* messagePulsa */,
+				D038F53E255D3F6700F20AC5 /* messageDetailMovie */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		D038F506255D3F6600F20AC5 /* messageMovie */ = {
+			isa = PBXGroup;
+			children = (
+				D038F507255D3F6600F20AC5 /* BtnMovie.swift */,
+				D038F508255D3F6600F20AC5 /* MessageMovie.swift */,
+				D038F509255D3F6600F20AC5 /* MoviewCell.swift */,
+				D038F50A255D3F6600F20AC5 /* BtnList.swift */,
+				D038F50B255D3F6600F20AC5 /* BtnMovie.xib */,
+				D038F50C255D3F6600F20AC5 /* MessageMovie.xib */,
+				D038F50D255D3F6600F20AC5 /* BtnList.xib */,
+				D038F50E255D3F6600F20AC5 /* MoviewCell.xib */,
+			);
+			path = messageMovie;
+			sourceTree = "<group>";
+		};
+		D038F50F255D3F6600F20AC5 /* messageList */ = {
+			isa = PBXGroup;
+			children = (
+				D038F510255D3F6600F20AC5 /* MessageList.swift */,
+				D038F511255D3F6600F20AC5 /* ListCell.swift */,
+				D038F512255D3F6600F20AC5 /* ListCell.xib */,
+				D038F513255D3F6600F20AC5 /* MessageList.xib */,
+			);
+			path = messageList;
+			sourceTree = "<group>";
+		};
+		D038F514255D3F6600F20AC5 /* messageConfirm */ = {
+			isa = PBXGroup;
+			children = (
+				D038F515255D3F6600F20AC5 /* MessageConfirm.swift */,
+			);
+			path = messageConfirm;
+			sourceTree = "<group>";
+		};
+		D038F516255D3F6600F20AC5 /* messageLoading */ = {
+			isa = PBXGroup;
+			children = (
+				D038F517255D3F6600F20AC5 /* MessageLoading.swift */,
+			);
+			path = messageLoading;
+			sourceTree = "<group>";
+		};
+		D038F518255D3F6600F20AC5 /* quickButton */ = {
+			isa = PBXGroup;
+			children = (
+				D038F519255D3F6600F20AC5 /* QuickButtonCell.swift */,
+				D038F51A255D3F6600F20AC5 /* QuickButtonCell.xib */,
+			);
+			path = quickButton;
+			sourceTree = "<group>";
+		};
+		D038F51B255D3F6600F20AC5 /* messageImage */ = {
+			isa = PBXGroup;
+			children = (
+				D038F51C255D3F6600F20AC5 /* ChatImage.swift */,
+				D038F51D255D3F6600F20AC5 /* ChatImage.xib */,
+			);
+			path = messageImage;
+			sourceTree = "<group>";
+		};
+		D038F51E255D3F6600F20AC5 /* messageText */ = {
+			isa = PBXGroup;
+			children = (
+				D038F51F255D3F6600F20AC5 /* MessageText.swift */,
+				D038F520255D3F6600F20AC5 /* MessageText.xib */,
+				D038F521255D3F6600F20AC5 /* MessageFromMe.xib */,
+				D038F522255D3F6600F20AC5 /* MessageFromMe.swift */,
+			);
+			path = messageText;
+			sourceTree = "<group>";
+		};
+		D038F523255D3F6600F20AC5 /* messageWeather */ = {
+			isa = PBXGroup;
+			children = (
+				D038F524255D3F6600F20AC5 /* WeatherCell.swift */,
+				D038F525255D3F6600F20AC5 /* WeatherCell.xib */,
+			);
+			path = messageWeather;
+			sourceTree = "<group>";
+		};
+		D038F526255D3F6600F20AC5 /* messageForm */ = {
+			isa = PBXGroup;
+			children = (
+				D038F527255D3F6600F20AC5 /* FormCell.xib */,
+				D038F528255D3F6600F20AC5 /* MessageForm.swift */,
+				D038F529255D3F6600F20AC5 /* FormCell.swift */,
+			);
+			path = messageForm;
+			sourceTree = "<group>";
+		};
+		D038F52A255D3F6600F20AC5 /* messageSummary */ = {
+			isa = PBXGroup;
+			children = (
+				D038F52B255D3F6600F20AC5 /* SummaryInfoCell.xib */,
+				D038F52C255D3F6600F20AC5 /* SummaryInfoCell.swift */,
+				D038F52D255D3F6600F20AC5 /* SummaryCell.swift */,
+				D038F52E255D3F6600F20AC5 /* SummaryCell.xib */,
+			);
+			path = messageSummary;
+			sourceTree = "<group>";
+		};
+		D038F52F255D3F6600F20AC5 /* messageCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				D038F530255D3F6600F20AC5 /* CarouselViewCell.swift */,
+				D038F531255D3F6600F20AC5 /* ButtonCarousel.xib */,
+				D038F532255D3F6600F20AC5 /* MessageCarousel.swift */,
+				D038F533255D3F6600F20AC5 /* ButtonCarousel.swift */,
+				D038F534255D3F6600F20AC5 /* CarouselViewCell.xib */,
+				D038F535255D3F6600F20AC5 /* MessageCarousel.xib */,
+			);
+			path = messageCarousel;
+			sourceTree = "<group>";
+		};
+		D038F536255D3F6600F20AC5 /* messageHtml */ = {
+			isa = PBXGroup;
+			children = (
+				D038F537255D3F6600F20AC5 /* MessageHtml.xib */,
+				D038F538255D3F6700F20AC5 /* MessageHtml.swift */,
+			);
+			path = messageHtml;
+			sourceTree = "<group>";
+		};
+		D038F539255D3F6700F20AC5 /* messagePulsa */ = {
+			isa = PBXGroup;
+			children = (
+				D038F53A255D3F6700F20AC5 /* MessageGrid.swift */,
+				D038F53B255D3F6700F20AC5 /* MessageGridCell.swift */,
+				D038F53C255D3F6700F20AC5 /* MessageGridCell.xib */,
+				D038F53D255D3F6700F20AC5 /* MessageGrid.xib */,
+			);
+			path = messagePulsa;
+			sourceTree = "<group>";
+		};
+		D038F53E255D3F6700F20AC5 /* messageDetailMovie */ = {
+			isa = PBXGroup;
+			children = (
+				D038F53F255D3F6700F20AC5 /* detailShowtimeCell.xib */,
+				D038F540255D3F6700F20AC5 /* detailShowtimeCell.swift */,
+				D038F541255D3F6700F20AC5 /* movieTimeCell.xib */,
+				D038F542255D3F6700F20AC5 /* detailSinopsisCell.xib */,
+				D038F543255D3F6700F20AC5 /* detailSinopsisCell.swift */,
+				D038F544255D3F6700F20AC5 /* movieTimeCell.swift */,
+			);
+			path = messageDetailMovie;
+			sourceTree = "<group>";
+		};
+		D038F545255D3F6700F20AC5 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D038F546255D3F6700F20AC5 /* UserRepository.swift */,
+				D038F547255D3F6700F20AC5 /* DecryptAes.swift */,
+				D038F548255D3F6700F20AC5 /* GenerateId.swift */,
+				D038F549255D3F6700F20AC5 /* Chats.swift */,
+				D038F54A255D3F6700F20AC5 /* CustomImageView.swift */,
+				D038F54B255D3F6700F20AC5 /* EncryptAes.swift */,
+				D038F54C255D3F6700F20AC5 /* Constan.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		D038F54D255D3F6700F20AC5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D038F54E255D3F6700F20AC5 /* APIManager.swift */,
+				D038F54F255D3F6700F20AC5 /* Regist.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D038F550255D3F6700F20AC5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D038F551255D3F6700F20AC5 /* ChatViewController.swift */,
+				D038F552255D3F6700F20AC5 /* ChatActivity.storyboard */,
+				D0C91BB0256F61DA00FCF230 /* GPSController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D038F553255D3F6700F20AC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D038F554255D3F6700F20AC5 /* Message.swift */,
+				D038F555255D3F6700F20AC5 /* NotifData.swift */,
+				D038F556255D3F6700F20AC5 /* MessageTextType.swift */,
+				D038F557255D3F6700F20AC5 /* MessageInput.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D038F558255D3F6700F20AC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D038F559255D3F6700F20AC5 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D038F55A255D3F6700F20AC5 /* Assets.xcassets */,
+				D038F55B255D3F6700F20AC5 /* font */,
+				D038F561255D3F6700F20AC5 /* Animations */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D038F55B255D3F6700F20AC5 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				D038F55C255D3F6700F20AC5 /* Quicksand-Bold.ttf */,
+				D038F55D255D3F6700F20AC5 /* Quicksand-Medium.ttf */,
+				D038F55E255D3F6700F20AC5 /* Quicksand-Regular.ttf */,
+				D038F55F255D3F6700F20AC5 /* SF-Pro-Text-Regular.otf */,
+				D038F560255D3F6700F20AC5 /* Quicksand-Light.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		D038F561255D3F6700F20AC5 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				D038F562255D3F6700F20AC5 /* dot_loading.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		D038F563255D3F6700F20AC5 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				D038F564255D3F6700F20AC5 /* UIViewHelper.swift */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D038F4C4255D3A4300F20AC5 /* Lenna_chat_sdk_4 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D038F4EF255D3A4B00F20AC5 /* Build configuration list for PBXNativeTarget "Lenna_chat_sdk_4" */;
+			buildPhases = (
+				BE6890EA78294BF0DDECEFD7 /* [CP] Check Pods Manifest.lock */,
+				D038F4C1255D3A4300F20AC5 /* Sources */,
+				D038F4C2255D3A4300F20AC5 /* Frameworks */,
+				D038F4C3255D3A4300F20AC5 /* Resources */,
+				F19ECF726A89F590BDBB9595 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lenna_chat_sdk_4;
+			productName = Lenna_chat_sdk_4;
+			productReference = D038F4C5255D3A4300F20AC5 /* Lenna_chat_sdk_4.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D038F4DA255D3A4B00F20AC5 /* Lenna_chat_sdk_4Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D038F4F2255D3A4B00F20AC5 /* Build configuration list for PBXNativeTarget "Lenna_chat_sdk_4Tests" */;
+			buildPhases = (
+				40B2D7CB387E99ED591A36D0 /* [CP] Check Pods Manifest.lock */,
+				D038F4D7255D3A4B00F20AC5 /* Sources */,
+				D038F4D8255D3A4B00F20AC5 /* Frameworks */,
+				D038F4D9255D3A4B00F20AC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D038F4DD255D3A4B00F20AC5 /* PBXTargetDependency */,
+			);
+			name = Lenna_chat_sdk_4Tests;
+			productName = Lenna_chat_sdk_4Tests;
+			productReference = D038F4DB255D3A4B00F20AC5 /* Lenna_chat_sdk_4Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D038F4E5255D3A4B00F20AC5 /* Lenna_chat_sdk_4UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D038F4F5255D3A4B00F20AC5 /* Build configuration list for PBXNativeTarget "Lenna_chat_sdk_4UITests" */;
+			buildPhases = (
+				E564851B8F6564E92F8E9ACC /* [CP] Check Pods Manifest.lock */,
+				D038F4E2255D3A4B00F20AC5 /* Sources */,
+				D038F4E3255D3A4B00F20AC5 /* Frameworks */,
+				D038F4E4255D3A4B00F20AC5 /* Resources */,
+				E17ED1B099FCAFD87D5AD57A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D038F4E8255D3A4B00F20AC5 /* PBXTargetDependency */,
+			);
+			name = Lenna_chat_sdk_4UITests;
+			productName = Lenna_chat_sdk_4UITests;
+			productReference = D038F4E6255D3A4B00F20AC5 /* Lenna_chat_sdk_4UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D038F4BD255D3A4300F20AC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = lenna;
+				TargetAttributes = {
+					D038F4C4255D3A4300F20AC5 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					D038F4DA255D3A4B00F20AC5 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = D038F4C4255D3A4300F20AC5;
+					};
+					D038F4E5255D3A4B00F20AC5 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = D038F4C4255D3A4300F20AC5;
+					};
+				};
+			};
+			buildConfigurationList = D038F4C0255D3A4300F20AC5 /* Build configuration list for PBXProject "Lenna_chat_sdk_4" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D038F4BC255D3A4300F20AC5;
+			productRefGroup = D038F4C6255D3A4300F20AC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D038F4C4255D3A4300F20AC5 /* Lenna_chat_sdk_4 */,
+				D038F4DA255D3A4B00F20AC5 /* Lenna_chat_sdk_4Tests */,
+				D038F4E5255D3A4B00F20AC5 /* Lenna_chat_sdk_4UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D038F4C3255D3A4300F20AC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D038F5B2255D3F6800F20AC5 /* SF-Pro-Text-Regular.otf in Resources */,
+				D038F574255D3F6700F20AC5 /* BtnList.xib in Resources */,
+				D038F586255D3F6700F20AC5 /* FormCell.xib in Resources */,
+				D038F597255D3F6700F20AC5 /* MessageGridCell.xib in Resources */,
+				D038F578255D3F6700F20AC5 /* ListCell.xib in Resources */,
+				D038F56A255D3F6700F20AC5 /* AJDotLoadingView.xib in Resources */,
+				D038F59B255D3F6800F20AC5 /* movieTimeCell.xib in Resources */,
+				D038F582255D3F6700F20AC5 /* MessageFromMe.xib in Resources */,
+				D038F5A9255D3F6800F20AC5 /* ChatActivity.storyboard in Resources */,
+				D038F4D5255D3A4A00F20AC5 /* LaunchScreen.storyboard in Resources */,
+				D038F572255D3F6700F20AC5 /* BtnMovie.xib in Resources */,
+				D038F4D2255D3A4A00F20AC5 /* Assets.xcassets in Resources */,
+				D038F573255D3F6700F20AC5 /* MessageMovie.xib in Resources */,
+				D038F57D255D3F6700F20AC5 /* QuickButtonCell.xib in Resources */,
+				D038F598255D3F6700F20AC5 /* MessageGrid.xib in Resources */,
+				D038F58C255D3F6700F20AC5 /* SummaryCell.xib in Resources */,
+				D038F59C255D3F6800F20AC5 /* detailSinopsisCell.xib in Resources */,
+				D038F5B0255D3F6800F20AC5 /* Quicksand-Medium.ttf in Resources */,
+				D038F58E255D3F6700F20AC5 /* ButtonCarousel.xib in Resources */,
+				D038F579255D3F6700F20AC5 /* MessageList.xib in Resources */,
+				D038F5B1255D3F6800F20AC5 /* Quicksand-Regular.ttf in Resources */,
+				D038F5B3255D3F6800F20AC5 /* Quicksand-Light.ttf in Resources */,
+				D038F57F255D3F6700F20AC5 /* ChatImage.xib in Resources */,
+				D038F5AF255D3F6800F20AC5 /* Quicksand-Bold.ttf in Resources */,
+				D038F592255D3F6700F20AC5 /* MessageCarousel.xib in Resources */,
+				D038F599255D3F6800F20AC5 /* detailShowtimeCell.xib in Resources */,
+				D038F589255D3F6700F20AC5 /* SummaryInfoCell.xib in Resources */,
+				D038F575255D3F6700F20AC5 /* MoviewCell.xib in Resources */,
+				D038F5B4255D3F6800F20AC5 /* dot_loading.json in Resources */,
+				D038F581255D3F6700F20AC5 /* MessageText.xib in Resources */,
+				D038F593255D3F6700F20AC5 /* MessageHtml.xib in Resources */,
+				D038F4D0255D3A4300F20AC5 /* Main.storyboard in Resources */,
+				D038F5AE255D3F6800F20AC5 /* Assets.xcassets in Resources */,
+				D038F591255D3F6700F20AC5 /* CarouselViewCell.xib in Resources */,
+				D038F585255D3F6700F20AC5 /* WeatherCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D038F4D9255D3A4B00F20AC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D038F4E4255D3A4B00F20AC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40B2D7CB387E99ED591A36D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lenna_chat_sdk_4Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE6890EA78294BF0DDECEFD7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lenna_chat_sdk_4-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E17ED1B099FCAFD87D5AD57A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests/Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests/Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests/Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E564851B8F6564E92F8E9ACC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F19ECF726A89F590BDBB9595 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lenna_chat_sdk_4/Pods-Lenna_chat_sdk_4-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lenna_chat_sdk_4/Pods-Lenna_chat_sdk_4-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lenna_chat_sdk_4/Pods-Lenna_chat_sdk_4-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D038F4C1255D3A4300F20AC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D038F568255D3F6700F20AC5 /* CustomDatePickerController.swift in Sources */,
+				D038F583255D3F6700F20AC5 /* MessageFromMe.swift in Sources */,
+				D038F5A5255D3F6800F20AC5 /* Constan.swift in Sources */,
+				D038F58B255D3F6700F20AC5 /* SummaryCell.swift in Sources */,
+				D038F5A1255D3F6800F20AC5 /* GenerateId.swift in Sources */,
+				D038F5AB255D3F6800F20AC5 /* NotifData.swift in Sources */,
+				D038F56D255D3F6700F20AC5 /* ExtensionCollection.swift in Sources */,
+				D038F571255D3F6700F20AC5 /* BtnList.swift in Sources */,
+				D038F570255D3F6700F20AC5 /* MoviewCell.swift in Sources */,
+				D038F594255D3F6700F20AC5 /* MessageHtml.swift in Sources */,
+				D038F5B5255D3F6800F20AC5 /* UIViewHelper.swift in Sources */,
+				D038F4CD255D3A4300F20AC5 /* ViewController.swift in Sources */,
+				D038F5A2255D3F6800F20AC5 /* Chats.swift in Sources */,
+				D038F5A8255D3F6800F20AC5 /* ChatViewController.swift in Sources */,
+				D038F58F255D3F6700F20AC5 /* MessageCarousel.swift in Sources */,
+				D0C91BB1256F61DA00FCF230 /* GPSController.swift in Sources */,
+				D038F5AC255D3F6800F20AC5 /* MessageTextType.swift in Sources */,
+				D038F5A6255D3F6800F20AC5 /* APIManager.swift in Sources */,
+				D038F56C255D3F6700F20AC5 /* AJDotLoadingView.swift in Sources */,
+				D038F56F255D3F6700F20AC5 /* MessageMovie.swift in Sources */,
+				D038F57E255D3F6700F20AC5 /* ChatImage.swift in Sources */,
+				D038F4C9255D3A4300F20AC5 /* AppDelegate.swift in Sources */,
+				D038F566255D3F6700F20AC5 /* CustomAlertService.swift in Sources */,
+				D038F565255D3F6700F20AC5 /* ConfirmationCustomAlertController.swift in Sources */,
+				D038F59A255D3F6800F20AC5 /* detailShowtimeCell.swift in Sources */,
+				D038F56B255D3F6700F20AC5 /* UIDotLoadingIndicator.swift in Sources */,
+				D038F577255D3F6700F20AC5 /* ListCell.swift in Sources */,
+				D038F5AD255D3F6800F20AC5 /* MessageInput.swift in Sources */,
+				D038F569255D3F6700F20AC5 /* CustomAlertController.swift in Sources */,
+				D038F587255D3F6700F20AC5 /* MessageForm.swift in Sources */,
+				D038F57C255D3F6700F20AC5 /* QuickButtonCell.swift in Sources */,
+				D038F588255D3F6700F20AC5 /* FormCell.swift in Sources */,
+				D038F57B255D3F6700F20AC5 /* MessageLoading.swift in Sources */,
+				D038F56E255D3F6700F20AC5 /* BtnMovie.swift in Sources */,
+				D038F590255D3F6700F20AC5 /* ButtonCarousel.swift in Sources */,
+				D038F5A4255D3F6800F20AC5 /* EncryptAes.swift in Sources */,
+				D038F57A255D3F6700F20AC5 /* MessageConfirm.swift in Sources */,
+				D038F596255D3F6700F20AC5 /* MessageGridCell.swift in Sources */,
+				D038F58A255D3F6700F20AC5 /* SummaryInfoCell.swift in Sources */,
+				D038F58D255D3F6700F20AC5 /* CarouselViewCell.swift in Sources */,
+				D038F5A3255D3F6800F20AC5 /* CustomImageView.swift in Sources */,
+				D038F5A7255D3F6800F20AC5 /* Regist.swift in Sources */,
+				D038F580255D3F6700F20AC5 /* MessageText.swift in Sources */,
+				D038F584255D3F6700F20AC5 /* WeatherCell.swift in Sources */,
+				D038F576255D3F6700F20AC5 /* MessageList.swift in Sources */,
+				D038F595255D3F6700F20AC5 /* MessageGrid.swift in Sources */,
+				D038F4CB255D3A4300F20AC5 /* SceneDelegate.swift in Sources */,
+				D038F59D255D3F6800F20AC5 /* detailSinopsisCell.swift in Sources */,
+				D038F59E255D3F6800F20AC5 /* movieTimeCell.swift in Sources */,
+				D038F5A0255D3F6800F20AC5 /* DecryptAes.swift in Sources */,
+				D038F5AA255D3F6800F20AC5 /* Message.swift in Sources */,
+				D038F59F255D3F6800F20AC5 /* UserRepository.swift in Sources */,
+				D038F567255D3F6700F20AC5 /* CustomGenderController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D038F4D7255D3A4B00F20AC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D038F4E0255D3A4B00F20AC5 /* Lenna_chat_sdk_4Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D038F4E2255D3A4B00F20AC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D038F4EB255D3A4B00F20AC5 /* Lenna_chat_sdk_4UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D038F4DD255D3A4B00F20AC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D038F4C4255D3A4300F20AC5 /* Lenna_chat_sdk_4 */;
+			targetProxy = D038F4DC255D3A4B00F20AC5 /* PBXContainerItemProxy */;
+		};
+		D038F4E8255D3A4B00F20AC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D038F4C4255D3A4300F20AC5 /* Lenna_chat_sdk_4 */;
+			targetProxy = D038F4E7255D3A4B00F20AC5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D038F4CE255D3A4300F20AC5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D038F4CF255D3A4300F20AC5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D038F4D3255D3A4A00F20AC5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D038F4D4255D3A4A00F20AC5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D038F4ED255D3A4B00F20AC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D038F4EE255D3A4B00F20AC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D038F4F0255D3A4B00F20AC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E7114FFAA846E6A72A8798A /* Pods-Lenna_chat_sdk_4.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = BDMCKR5737;
+				INFOPLIST_FILE = Lenna_chat_sdk_4/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ai.lenna.Lenna-chat-sdk-4";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D038F4F1255D3A4B00F20AC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F053AA19E4E7C23675244078 /* Pods-Lenna_chat_sdk_4.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = BDMCKR5737;
+				INFOPLIST_FILE = Lenna_chat_sdk_4/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ai.lenna.Lenna-chat-sdk-4";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D038F4F3255D3A4B00F20AC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BD5541D56342B3C3149C3A5 /* Pods-Lenna_chat_sdk_4Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BDMCKR5737;
+				INFOPLIST_FILE = Lenna_chat_sdk_4Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ai.lenna.Lenna-chat-sdk-4Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lenna_chat_sdk_4.app/Lenna_chat_sdk_4";
+			};
+			name = Debug;
+		};
+		D038F4F4255D3A4B00F20AC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63BBA9447C6BBE8B29AB6CFA /* Pods-Lenna_chat_sdk_4Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BDMCKR5737;
+				INFOPLIST_FILE = Lenna_chat_sdk_4Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ai.lenna.Lenna-chat-sdk-4Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lenna_chat_sdk_4.app/Lenna_chat_sdk_4";
+			};
+			name = Release;
+		};
+		D038F4F6255D3A4B00F20AC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E86FF23572AFF104E5D24E8A /* Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BDMCKR5737;
+				INFOPLIST_FILE = Lenna_chat_sdk_4UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ai.lenna.Lenna-chat-sdk-4UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Lenna_chat_sdk_4;
+			};
+			name = Debug;
+		};
+		D038F4F7255D3A4B00F20AC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04AA293DB4FC13974A0274DC /* Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BDMCKR5737;
+				INFOPLIST_FILE = Lenna_chat_sdk_4UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ai.lenna.Lenna-chat-sdk-4UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Lenna_chat_sdk_4;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D038F4C0255D3A4300F20AC5 /* Build configuration list for PBXProject "Lenna_chat_sdk_4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D038F4ED255D3A4B00F20AC5 /* Debug */,
+				D038F4EE255D3A4B00F20AC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D038F4EF255D3A4B00F20AC5 /* Build configuration list for PBXNativeTarget "Lenna_chat_sdk_4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D038F4F0255D3A4B00F20AC5 /* Debug */,
+				D038F4F1255D3A4B00F20AC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D038F4F2255D3A4B00F20AC5 /* Build configuration list for PBXNativeTarget "Lenna_chat_sdk_4Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D038F4F3255D3A4B00F20AC5 /* Debug */,
+				D038F4F4255D3A4B00F20AC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D038F4F5255D3A4B00F20AC5 /* Build configuration list for PBXNativeTarget "Lenna_chat_sdk_4UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D038F4F6255D3A4B00F20AC5 /* Debug */,
+				D038F4F7255D3A4B00F20AC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D038F4BD255D3A4300F20AC5 /* Project object */;
+}

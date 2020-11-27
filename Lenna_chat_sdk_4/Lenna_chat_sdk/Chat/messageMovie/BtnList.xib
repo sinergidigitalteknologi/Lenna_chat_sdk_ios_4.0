@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BtnList" id="gTV-IL-0wX" customClass="BtnList" customModule="Lenna" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pMQ-7P-v32">
+                        <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUz-7s-wI5">
+                                <rect key="frame" x="4" y="4" width="37" height="22"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="13"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0039215686274509803" green="0.61960784313725492" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedTime:" destination="gTV-IL-0wX" eventType="touchUpInside" id="I0c-Ey-kZP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="TUz-7s-wI5" secondAttribute="bottom" constant="4" id="Rjs-zy-Qaj"/>
+                            <constraint firstAttribute="trailing" secondItem="TUz-7s-wI5" secondAttribute="trailing" constant="4" id="bdN-NR-Vti"/>
+                            <constraint firstItem="TUz-7s-wI5" firstAttribute="leading" secondItem="pMQ-7P-v32" secondAttribute="leading" constant="4" id="m8k-1Y-zld"/>
+                            <constraint firstItem="TUz-7s-wI5" firstAttribute="top" secondItem="pMQ-7P-v32" secondAttribute="top" constant="4" id="msN-di-HXR"/>
+                            <constraint firstAttribute="height" constant="30" id="xr8-og-ODZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="pMQ-7P-v32" secondAttribute="bottom" id="ALN-qk-y28"/>
+                <constraint firstItem="pMQ-7P-v32" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="G5X-kj-Pq0"/>
+                <constraint firstItem="pMQ-7P-v32" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nRk-gn-wE9"/>
+                <constraint firstAttribute="trailing" secondItem="pMQ-7P-v32" secondAttribute="trailing" id="oW4-Vf-3jL"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="12"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                    <real key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                    <real key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                    <color key="value" red="0.0" green="0.52941176469999995" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="ParentView" destination="pMQ-7P-v32" id="984-cq-ldb"/>
+                <outlet property="time" destination="TUz-7s-wI5" id="uRq-0g-eFg"/>
+            </connections>
+            <point key="canvasLocation" x="136.80000000000001" y="114.24287856071965"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="messageMovieId" id="gTV-IL-0wX" customClass="MoviewCell" customModule="Lenna" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="300"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="250" height="300"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULV-OM-oR0">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="300"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Iu-B1-eDX">
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Goi-aY-rbI"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="f1q-Se-dXt">
+                                <rect key="frame" x="0.0" y="250" width="250" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4Iu-B1-eDX" firstAttribute="top" secondItem="ULV-OM-oR0" secondAttribute="top" id="5zQ-Zw-G4H"/>
+                            <constraint firstAttribute="bottom" secondItem="f1q-Se-dXt" secondAttribute="bottom" id="Baa-5j-HZj"/>
+                            <constraint firstAttribute="trailing" secondItem="4Iu-B1-eDX" secondAttribute="trailing" id="Q9P-H3-IRB"/>
+                            <constraint firstItem="4Iu-B1-eDX" firstAttribute="leading" secondItem="ULV-OM-oR0" secondAttribute="leading" id="XLC-zT-nEe"/>
+                            <constraint firstItem="f1q-Se-dXt" firstAttribute="top" secondItem="4Iu-B1-eDX" secondAttribute="bottom" id="XqG-tm-tGc"/>
+                            <constraint firstItem="f1q-Se-dXt" firstAttribute="leading" secondItem="ULV-OM-oR0" secondAttribute="leading" id="mgM-zM-Z4t"/>
+                            <constraint firstAttribute="trailing" secondItem="f1q-Se-dXt" secondAttribute="trailing" id="pEo-d5-f4n"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="ULV-OM-oR0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="KPu-j8-zea"/>
+                <constraint firstItem="ULV-OM-oR0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="avP-xW-qDT"/>
+                <constraint firstAttribute="trailing" secondItem="ULV-OM-oR0" secondAttribute="trailing" id="hzI-b4-023"/>
+                <constraint firstAttribute="bottom" secondItem="ULV-OM-oR0" secondAttribute="bottom" id="wIE-vY-HEa"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="195" height="60"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="12"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="btnCell" destination="f1q-Se-dXt" id="cvk-by-bJN"/>
+                <outlet property="movieImage" destination="4Iu-B1-eDX" id="qII-oP-F52"/>
+            </connections>
+            <point key="canvasLocation" x="92" y="50.824587706146929"/>
+        </collectionViewCell>
+    </objects>
+</document>

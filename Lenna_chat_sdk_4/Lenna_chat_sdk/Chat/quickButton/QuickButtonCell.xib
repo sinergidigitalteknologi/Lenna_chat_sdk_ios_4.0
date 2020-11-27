@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Medium.otf">
+            <string>SFProText-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="QuickButtonCell" id="gTV-IL-0wX" customClass="QuickButtonCell" customModule="Lenna_chat_sdk_4" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="115" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="115" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9HE-n8-hCi" customClass="QuickButtonCell" customModule="Lenna_chat_sdk_4" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="115" height="40"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="nAr-H0-ULL">
+                                <rect key="frame" x="5" y="3" width="105" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
+                                <state key="normal" title="option">
+                                    <color key="titleColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemIndigoColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="nAr-H0-ULL" secondAttribute="bottom" constant="3" id="6MO-mT-4Jh"/>
+                            <constraint firstItem="nAr-H0-ULL" firstAttribute="leading" secondItem="9HE-n8-hCi" secondAttribute="leading" constant="5" id="Tau-3P-ykc"/>
+                            <constraint firstItem="nAr-H0-ULL" firstAttribute="top" secondItem="9HE-n8-hCi" secondAttribute="top" constant="3" id="Zbn-Oi-j7B"/>
+                            <constraint firstAttribute="trailing" secondItem="nAr-H0-ULL" secondAttribute="trailing" constant="5" id="bKs-yZ-OTc"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.69999999999999996"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="0.69999999999999996"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="9HE-n8-hCi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Wwb-Eu-0l8"/>
+                <constraint firstAttribute="bottom" secondItem="9HE-n8-hCi" secondAttribute="bottom" id="ZsW-jM-Xmy"/>
+                <constraint firstAttribute="trailing" secondItem="9HE-n8-hCi" secondAttribute="trailing" id="doT-FA-3Oj"/>
+                <constraint firstItem="9HE-n8-hCi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ey4-A6-IU1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="115" height="50"/>
+            <connections>
+                <outlet property="quickButton" destination="nAr-H0-ULL" id="axz-jr-MT5"/>
+            </connections>
+            <point key="canvasLocation" x="85.599999999999994" y="154.72263868065968"/>
+        </collectionViewCell>
+    </objects>
+</document>

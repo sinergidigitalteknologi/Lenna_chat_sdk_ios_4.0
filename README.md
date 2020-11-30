@@ -1,4 +1,4 @@
-# Lenna_chat_sdk_ios_4.0
+# Lenna chat sdk ios (swift 4.0)
 This is a chat sdk for Ios from <a href="https://lenna.ai">Lenna</a> (PT Sinergi Digital Teknologi)
 
 [![Build Status](https://img.shields.io/badge/platform-iOS-orange.svg)](https://github.com/sinergidigitalteknologi/Lenna_chat_sdk_ios_4.0)
@@ -9,8 +9,8 @@ This is a chat sdk for Ios from <a href="https://lenna.ai">Lenna</a> (PT Sinergi
 ```bash
 $ gem install cocoapods
 ```
-## In Your Podfile
-set some library to support Lenna chat sdk Ios.
+
+set in podfile some library to support Lenna chat sdk Ios.
 ```ruby
 target 'YourApp' do
   use_frameworks!

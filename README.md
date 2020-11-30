@@ -62,6 +62,7 @@ to install depedency / library in pod
 $ pod install
 ```
 
+
 ## 5. Usage
  - Declaration Class in your controller
 ```swift
@@ -88,7 +89,9 @@ class ViewController: UIViewController {
         }
     }
 ```
-## 5. Result
+
+
+## 6. Result
 ![Alt text](https://raw.githubusercontent.com/sinergidigitalteknologi/Lenna_chat_sdk_ios_4.0/master/Screen%20Shot%202020-11-30%20at%2011.38.21%20AM.png "a title")
 
 ----------------------------

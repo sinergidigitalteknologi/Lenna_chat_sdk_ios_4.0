@@ -35,6 +35,7 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
     @IBOutlet weak var mic: UIButton!
     @IBOutlet weak var logoHeader: UIImageView!
     
+    @IBOutlet weak var tookBar: UIView!
     
     var userInterfaceStyle : UIUserInterfaceStyle?
     
@@ -75,7 +76,7 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
     var micActive = false
     var isFalback = false
     //speechRecognizer
-    private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "id-ID"))
+    private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "id-ID"))//1
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
@@ -131,6 +132,8 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
         super.viewDidLoad()
         
         setLogoHeader()
+        speechRecognizer?.delegate = self as? SFSpeechRecognizerDelegate  //3
+
         let audioSession = AVAudioSession.sharedInstance()
         do {
             try audioSession.setCategory(AVAudioSessionCategoryPlayback, mode: AVAudioSessionModeDefault)
@@ -143,6 +146,8 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
             // User Interface is Dark
             if #available(iOS 13.0, *) {
                 self.chatMessage.backgroundColor = .secondarySystemBackground
+                self.tookBar.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+                
                 //                leftButton.setImage(#imageLiteral(resourceName: "ic_menu_dark"), for: .normal)
             } else {
                 // Fallback on earlier versions
@@ -1071,10 +1076,13 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
         if audioEngine.isRunning {
             audioEngine.stop()
             recognitionRequest?.endAudio()
+//            mic.isEnabled = false
             timer.invalidate()
+            mic.setImage(#imageLiteral(resourceName: "icon_mic"), for: .normal)
             
         } else {
             startRecording()
+            mic.setImage(#imageLiteral(resourceName: "icon_mic2"), for: .normal)
             
         }
         
@@ -1741,7 +1749,6 @@ extension ChatViewController : UICollectionViewDelegate, UICollectionViewDataSou
             recognitionTask = nil
         }
         //
-        mic.setImage(UIImage(named: "icon_mic2"), for: .normal)
         micActive = true
         if self.player != nil && self.player.rate != 0{
             self.player!.pause()
@@ -1749,7 +1756,7 @@ extension ChatViewController : UICollectionViewDelegate, UICollectionViewDataSou
         
         let audioSession = AVAudioSession.sharedInstance()
         do {
-            try audioSession.setCategory(AVAudioSessionCategoryPlayback, mode: AVAudioSessionModeDefault)
+            try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord, mode: AVAudioSessionModeDefault)
             try audioSession.setMode(AVAudioSessionModeMeasurement)
             try audioSession.setActive(true, with: .notifyOthersOnDeactivation)
         } catch {
@@ -1767,23 +1774,30 @@ extension ChatViewController : UICollectionViewDelegate, UICollectionViewDataSou
         recognitionRequest.shouldReportPartialResults = true
         
         recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest, resultHandler: { (result, error) in
+            print("startRecording result",result)
+            print("startRecording error", error)
+
             
             var isFinal = false
             
             if result != nil {
                 
                 isFinal = (result?.isFinal)!
+                print("startRecording isfinal", isFinal)
+
             }
             
             if error != nil || isFinal {
+                print("startRecording error != nil || isFinal")
                 self.audioEngine.stop()
                 inputNode.removeTap(onBus: 0)
                 
                 self.recognitionRequest = nil
                 self.recognitionTask = nil
                 
-                //                    self.microphoneButton.isEnabled = true
+                self.mic.isEnabled = true
             }else if error == nil {
+                print("startRecording error 2", error)
                 self.restartSpeechTimer(chat: result!.bestTranscription.formattedString)
             }
         })

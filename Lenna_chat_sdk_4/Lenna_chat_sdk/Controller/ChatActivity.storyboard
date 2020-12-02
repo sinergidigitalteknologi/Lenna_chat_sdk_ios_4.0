@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -54,7 +55,7 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YcL-eO-k0Z">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdE-1N-twU">
                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
@@ -95,7 +96,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="le4-bU-DVL">
-                                        <rect key="frame" x="331" y="10" width="35" height="32"/>
+                                        <rect key="frame" x="331" y="13" width="35" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="9Yn-7H-aqO"/>
                                             <constraint firstAttribute="height" constant="32" id="uBc-9c-v8E"/>
@@ -127,8 +128,8 @@
                                     <constraint firstItem="tfb-J1-UNK" firstAttribute="top" secondItem="r8H-OZ-rvS" secondAttribute="top" constant="15" id="58S-hC-ehB"/>
                                     <constraint firstItem="egM-LK-hIG" firstAttribute="leading" secondItem="r8H-OZ-rvS" secondAttribute="leading" constant="8" id="5KW-DL-dSi"/>
                                     <constraint firstItem="le4-bU-DVL" firstAttribute="leading" secondItem="tfb-J1-UNK" secondAttribute="trailing" constant="8" id="6l0-Ib-tFD"/>
-                                    <constraint firstItem="le4-bU-DVL" firstAttribute="top" secondItem="r8H-OZ-rvS" secondAttribute="top" constant="10" id="JOQ-U4-Vvq"/>
-                                    <constraint firstAttribute="bottom" secondItem="le4-bU-DVL" secondAttribute="bottom" constant="10" id="MFi-0D-hpX"/>
+                                    <constraint firstItem="le4-bU-DVL" firstAttribute="top" secondItem="r8H-OZ-rvS" secondAttribute="top" constant="13" id="JOQ-U4-Vvq"/>
+                                    <constraint firstAttribute="bottom" secondItem="le4-bU-DVL" secondAttribute="bottom" constant="12" id="MFi-0D-hpX"/>
                                     <constraint firstAttribute="trailing" secondItem="le4-bU-DVL" secondAttribute="trailing" constant="8" id="aLx-wq-j9k"/>
                                     <constraint firstItem="egM-LK-hIG" firstAttribute="top" secondItem="r8H-OZ-rvS" secondAttribute="top" constant="10" id="lwU-eR-JhZ"/>
                                     <constraint firstItem="tfb-J1-UNK" firstAttribute="leading" secondItem="egM-LK-hIG" secondAttribute="trailing" constant="12" id="pBk-fm-OR9"/>
@@ -179,6 +180,7 @@
                         <outlet property="mic" destination="le4-bU-DVL" id="LH5-ZM-etv"/>
                         <outlet property="quickButtonCollection" destination="sRf-ls-8tk" id="CyF-3s-XEp"/>
                         <outlet property="sendbutton" destination="tfb-J1-UNK" id="sLC-Te-jJF"/>
+                        <outlet property="tookBar" destination="FqK-oO-ymg" id="wPF-Ay-V9P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Qa-b6-jeN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -263,8 +265,8 @@
     </scenes>
     <resources>
         <image name="fill_1" width="488" height="509"/>
-        <image name="icon_mic" width="20" height="20"/>
-        <image name="icon_sendtext" width="14" height="13"/>
+        <image name="icon_mic" width="150" height="150"/>
+        <image name="icon_sendtext" width="105" height="100"/>
         <image name="img_gps_noactive" width="792" height="501"/>
     </resources>
 </document>

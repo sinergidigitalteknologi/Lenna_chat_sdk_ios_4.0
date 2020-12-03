@@ -164,6 +164,9 @@ class CarouselViewCell: UICollectionViewCell, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        print("CarouselViewCell tableView size",self.btnList.contentSize.height)
+        
+
         if arrAction.count == 1 {
             marginTop.constant = self.btnList.contentSize.height
         }

@@ -89,14 +89,11 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
     private var finishedLoadingInitialTableCells = false
     
     override func viewDidAppear(_ animated: Bool) {
-        requestTranscribePermissions()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //        if messageFromHome != "" {
         self.firstChat()
-        //        }
         
         if let hasGps =  UserDefaults.standard.object(forKey: "hasGps") as? Bool {
             if hasGps == true {
@@ -130,9 +127,35 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        requestTranscribePermissions()
         setLogoHeader()
+        mic.isEnabled = false  //2
         speechRecognizer?.delegate = self as? SFSpeechRecognizerDelegate  //3
+        SFSpeechRecognizer.requestAuthorization { (authStatus) in  //4
+                  
+                  var isButtonEnabled = false
+                  
+                  switch authStatus {  //5
+                  case .authorized:
+                      isButtonEnabled = true
+                      
+                  case .denied:
+                      isButtonEnabled = false
+                      print("User denied access to speech recognition")
+                      
+                  case .restricted:
+                      isButtonEnabled = false
+                      print("Speech recognition restricted on this device")
+                      
+                  case .notDetermined:
+                      isButtonEnabled = false
+                      print("Speech recognition not yet authorized")
+                  }
+                  
+                  OperationQueue.main.addOperation() {
+                      self.mic.isEnabled = isButtonEnabled
+                  }
+              }
 
         let audioSession = AVAudioSession.sharedInstance()
         do {
@@ -165,7 +188,6 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
         cornerRadius.layer.cornerRadius = 12
         //set background text field
         chatMessage.layer.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.937254902, alpha: 1)
-        
         
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
@@ -230,7 +252,6 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
         
         chatTableView.register(UINib.init(nibName: cellAirplaneMessage, bundle: nil), forCellReuseIdentifier: cellAirplaneMessage)
         
-        
         chatTableView.register(UINib.init(nibName: cellWeatherMessage, bundle: nil), forCellReuseIdentifier: cellWeatherMessage)
         
         chatTableView.register(UINib.init(nibName: cellMessageList, bundle: nil), forCellReuseIdentifier: cellMessageList)
@@ -242,14 +263,12 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
         
         showNavItem()
         
-        
         self.hideKeyboardWhenTappedAround()
         chatMessage.font = UIFont.systemFont(ofSize: 14)
         
         
         //        Listen keyboard event bruh
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.NSHTTPCookieManagerAcceptPolicyChanged, object: nil)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
@@ -1013,7 +1032,9 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
             // animasi untuk bounce up di last index
             
             let startFromHeight = tableView.frame.height
+            
             cell.layer.transform = CATransform3DMakeTranslation(0, startFromHeight, 0)
+            
             let delay = Double(indexPath.row) * 0.01
             
             UIView.animate(withDuration: 0.5, delay: delay, options: UIView.AnimationOptions.transitionFlipFromBottom, animations: {
@@ -1074,14 +1095,16 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
     @IBAction func pressButtonMic(_ sender: Any) {
         
         if audioEngine.isRunning {
+            print("pressButtonMic audioEngine.isRunning", audioEngine.isRunning)
             audioEngine.stop()
             recognitionRequest?.endAudio()
-//            mic.isEnabled = false
+            mic.isEnabled = false
             timer.invalidate()
             mic.setImage(#imageLiteral(resourceName: "icon_mic"), for: .normal)
             
         } else {
             startRecording()
+            print("pressButtonMic else = ", audioEngine.isRunning)
             mic.setImage(#imageLiteral(resourceName: "icon_mic2"), for: .normal)
             
         }
@@ -1309,18 +1332,18 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
         print("chatParams ",chatParams)
         print("header ",header)
         print("url ",base_url)
-       
-        
         
         Alamofire.request("https://app.lenna.ai/app/public/api/\(Constan.BOT_ID)/webhook/mobile", method: .post, parameters: chatParams, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
-            print("respon chat ", "ada")
+            print("respon chat 1 ", response)
             
             if response.value != nil {
+                
                 let rs : JSON = JSON(response.value!)
                 if rs["success"] == true {
                     //handle load
                     let count_message = self.newMessageArray.count
                     var last_data : Int  = 0
+                    // remove message
                     if self.newMessageArray.isEmpty == false{
                         last_data = self.newMessageArray.count
                         self.newMessageArray.remove(at: self.newMessageArray.count-1)
@@ -1491,25 +1514,92 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
                             
                             
                         }catch {
-                            //                        self.newMessageArray.remove(at: self.newMessageArray.count-1)
-                            print(error)
-                            //                        let loading = Message()
-                            //                        loading.type = "text"
-                            //                        loading.messageText = "Maaf sepertinya terjadi kesalahan"
-                            //                        self.newMessageArray.append(loading)
+                            var last_data : Int  = 0
+                            let newMessage = Message()
+                            newMessage.type = "text"
+                            newMessage.messageText = "Maaf sepertinya terjadi kendala telnis"
+                            if self.newMessageArray.isEmpty == false{
+                                last_data = self.newMessageArray.count
+                                if (last_data == 0){
+                                    self.newMessageArray.remove(at: self.newMessageArray.count)
+                                }else{
+                                    self.newMessageArray.remove(at: self.newMessageArray.count-1)
+                                }
+                                
+                                self.newMessageArray.append(newMessage)
+                                self.chatTableView.reloadData()
+                                
+                            }else{
+                                last_data = self.newMessageArray.count
+                                if (last_data == 0){
+                                    self.newMessageArray.remove(at: self.newMessageArray.count)
+                                }else{
+                                    self.newMessageArray.remove(at: self.newMessageArray.count-1)
+                                }
+                                self.newMessageArray.append(newMessage)
+                                self.chatTableView.reloadData()
+                            }
+                            print("catch",error)
                             self.chatTableView.reloadData()
                             
                         }
                         
                     case .failure(let error):
-                        //                    self.newMessageArray.remove(at: self.newMessageArray.count-1)
-                        print(error)
-                        //                    let loading = Message()
-                        //                    loading.type = "text"
-                        //                    loading.messageText = "Maaf sedang ada masalah koneksi nih , coba lagi ya"
-                        //                    self.newMessageArray.append(loading)
+                        var last_data : Int  = 0
+                        let newMessage = Message()
+                        newMessage.type = "text"
+                        newMessage.messageText = "Maaf sepertinya terjadi kendala telnis"
+                        if self.newMessageArray.isEmpty == false{
+                            last_data = self.newMessageArray.count
+                            if (last_data == 0){
+                                self.newMessageArray.remove(at: self.newMessageArray.count)
+                            }else{
+                                self.newMessageArray.remove(at: self.newMessageArray.count-1)
+                            }
+                            
+                            self.newMessageArray.append(newMessage)
+                            self.chatTableView.reloadData()
+                            
+                        }else{
+                            last_data = self.newMessageArray.count
+                            if (last_data == 0){
+                                self.newMessageArray.remove(at: self.newMessageArray.count)
+                            }else{
+                                self.newMessageArray.remove(at: self.newMessageArray.count-1)
+                            }
+                            self.newMessageArray.append(newMessage)
+                            self.chatTableView.reloadData()
+                        }
+                        print("catch",error)
                         self.chatTableView.reloadData()
-                        
+                    }
+                }
+                else{
+                    print("respon chat else ", response)
+                    var last_data : Int  = 0
+                    let newMessage = Message()
+                    newMessage.type = "text"
+                    newMessage.messageText = "Maaf sepertinya terjadi kendala telnis"
+                    if self.newMessageArray.isEmpty == false{
+                        last_data = self.newMessageArray.count
+                        if (last_data == 0){
+                            self.newMessageArray.remove(at: self.newMessageArray.count)
+                        }else{
+                            self.newMessageArray.remove(at: self.newMessageArray.count-1)
+                        }
+                       
+                        self.newMessageArray.append(newMessage)
+                        self.chatTableView.reloadData()
+
+                    }else{
+                        last_data = self.newMessageArray.count
+                        if (last_data == 0){
+                            self.newMessageArray.remove(at: self.newMessageArray.count)
+                        }else{
+                            self.newMessageArray.remove(at: self.newMessageArray.count-1)
+                        }
+                        self.newMessageArray.append(newMessage)
+                        self.chatTableView.reloadData()
                     }
                 }
                 
@@ -1569,11 +1659,6 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
                 }
                 else {
                     print("resonse voice error-> ","response else")
-                    let alertVC = self.alertService.alert(title: "Perhatian !", message: "Maaf, terjadi kesalahan silahkan coba beberapa saat lagi", image: "ic_alert_warning", headerColor: "#FF9900", id: 0){
-                        // no action
-                    }
-
-                    self.present(alertVC, animated: true)
                     
                 }
         }
@@ -1701,14 +1786,43 @@ extension ChatViewController : UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func requestTranscribePermissions() {
-        SFSpeechRecognizer.requestAuthorization { [unowned self] authStatus in
-            DispatchQueue.main.async {
-                if authStatus == .authorized {
-                    print("SFSpeechRecognizer ok")
-                } else {
-                    print("Transcription permission was declined.")
-                    self.handlePermissionFailed()
-                }
+//        SFSpeechRecognizer.requestAuthorization { [unowned self] authStatus in
+//            DispatchQueue.main.async {
+//                if authStatus == .authorized {
+//                    print("SFSpeechRecognizer ok")
+//                    self.mic.isEnabled = true
+//                } else {
+//                    print("Transcription permission was declined.")
+//                    self.handlePermissionFailed()
+//                }
+//            }
+//        }
+        
+        speechRecognizer?.delegate = self as? SFSpeechRecognizerDelegate  //3
+        
+        SFSpeechRecognizer.requestAuthorization { (authStatus) in  //4
+            
+            var isButtonEnabled = false
+            
+            switch authStatus {  //5
+            case .authorized:
+                isButtonEnabled = true
+                
+            case .denied:
+                isButtonEnabled = false
+                print("User denied access to speech recognition")
+                
+            case .restricted:
+                isButtonEnabled = false
+                print("Speech recognition restricted on this device")
+                
+            case .notDetermined:
+                isButtonEnabled = false
+                print("Speech recognition not yet authorized")
+            }
+            
+            OperationQueue.main.addOperation() {
+                self.mic.isEnabled = isButtonEnabled
             }
         }
     }
@@ -1749,11 +1863,11 @@ extension ChatViewController : UICollectionViewDelegate, UICollectionViewDataSou
             recognitionTask = nil
         }
         //
-        micActive = true
-        if self.player != nil && self.player.rate != 0{
-            self.player!.pause()
-        }
-        
+//        micActive = true
+//        if self.player != nil && self.player.rate != 0{
+//            self.player!.pause()
+//        }
+//
         let audioSession = AVAudioSession.sharedInstance()
         do {
             try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord, mode: AVAudioSessionModeDefault)
@@ -1776,22 +1890,15 @@ extension ChatViewController : UICollectionViewDelegate, UICollectionViewDataSou
         recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest, resultHandler: { (result, error) in
             print("startRecording result",result)
             print("startRecording error", error)
-
-            
             var isFinal = false
-            
             if result != nil {
-                
                 isFinal = (result?.isFinal)!
                 print("startRecording isfinal", isFinal)
-
             }
-            
             if error != nil || isFinal {
                 print("startRecording error != nil || isFinal")
                 self.audioEngine.stop()
                 inputNode.removeTap(onBus: 0)
-                
                 self.recognitionRequest = nil
                 self.recognitionTask = nil
                 
@@ -1827,15 +1934,11 @@ extension ChatViewController : UICollectionViewDelegate, UICollectionViewDataSou
             print("interval stop....")
             let a =  chat.replacingOccurrences(of: "(", with: "")
             let b =  a.replacingOccurrences(of: ")", with: "")
-            self.chatMessage.text = b
+            self.chatMessage.text = chat
             print(chat)
             self.recognitionTask?.cancel()
             self.audioEngine.stop()
             self.mic.setImage(UIImage(named: "icon_mic"), for: .normal)
-            self.micActive = false
-            if self.player != nil && self.player.rate != 0{
-                self.player!.pause()
-            }
             self.sendToChat(text: b)
         })
         

@@ -29,6 +29,7 @@ class MessageCarousel: UITableViewCell, UICollectionViewDelegate, UICollectionVi
         self.carouselImage.delegate = self
         self.carouselImage.register(UINib.init(nibName: "CarouselViewCell", bundle: nil), forCellWithReuseIdentifier: "carouselViewID")
         
+        
 //        let layout = self.carouselImage.collectionViewLayout as! UICollectionViewFlowLayout
 //        let width = UIScreen.main.bounds.width
 //        layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
@@ -42,7 +43,7 @@ class MessageCarousel: UITableViewCell, UICollectionViewDelegate, UICollectionVi
     }
     
     func CarouselButton(newMessage: String) {
-        print("tesssss ", newMessage)
+        print("MessageCarousel CarouselButton", newMessage)
         btnMessageDelegate?.CarouselMessageButton(newMessage: newMessage)
     }
 
@@ -75,6 +76,7 @@ class MessageCarousel: UITableViewCell, UICollectionViewDelegate, UICollectionVi
         cell.btnDelegate = self
         
         cell.arrAction = dataCarousel.actions
+        cell.btnList.rowHeight = CGFloat(80/cell.arrAction.count)
         
         cell.btnList.reloadData()
     

@@ -34,10 +34,12 @@ class ButtonCarousel: UITableViewCell {
         }else {
             layer.backgroundColor = UIColor.white.cgColor
              contentView.backgroundColor = UIColor.white
-            btnAction.backgroundColor = .white
+            btnAction.backgroundColor = .brown
             print("light mode")
         }
-
+        btnAction.titleLabel?.lineBreakMode = .byWordWrapping
+        btnAction.titleLabel?.textAlignment = .center
+       
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {

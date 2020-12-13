@@ -39,8 +39,6 @@
 		D038F579255D3F6700F20AC5 /* MessageList.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F513255D3F6600F20AC5 /* MessageList.xib */; };
 		D038F57A255D3F6700F20AC5 /* MessageConfirm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F515255D3F6600F20AC5 /* MessageConfirm.swift */; };
 		D038F57B255D3F6700F20AC5 /* MessageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F517255D3F6600F20AC5 /* MessageLoading.swift */; };
-		D038F57C255D3F6700F20AC5 /* QuickButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F519255D3F6600F20AC5 /* QuickButtonCell.swift */; };
-		D038F57D255D3F6700F20AC5 /* QuickButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F51A255D3F6600F20AC5 /* QuickButtonCell.xib */; };
 		D038F57E255D3F6700F20AC5 /* ChatImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F51C255D3F6600F20AC5 /* ChatImage.swift */; };
 		D038F57F255D3F6700F20AC5 /* ChatImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = D038F51D255D3F6600F20AC5 /* ChatImage.xib */; };
 		D038F580255D3F6700F20AC5 /* MessageText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F51F255D3F6600F20AC5 /* MessageText.swift */; };
@@ -97,6 +95,8 @@
 		D038F5B3255D3F6800F20AC5 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D038F560255D3F6700F20AC5 /* Quicksand-Light.ttf */; };
 		D038F5B4255D3F6800F20AC5 /* dot_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = D038F562255D3F6700F20AC5 /* dot_loading.json */; };
 		D038F5B5255D3F6800F20AC5 /* UIViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F564255D3F6700F20AC5 /* UIViewHelper.swift */; };
+		D0429EC82579F3850047F5B8 /* QuickButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0429EC62579F3850047F5B8 /* QuickButtonCell.swift */; };
+		D0429EC92579F3850047F5B8 /* QuickButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0429EC72579F3850047F5B8 /* QuickButtonCell.xib */; };
 		D0C91BB1256F61DA00FCF230 /* GPSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C91BB0256F61DA00FCF230 /* GPSController.swift */; };
 		D69F96FA88B20DADA5F4DCF8 /* Pods_Lenna_chat_sdk_4_Lenna_chat_sdk_4UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20185DC61419A50A6C5E754D /* Pods_Lenna_chat_sdk_4_Lenna_chat_sdk_4UITests.framework */; };
 		E461363BA33E90CB6EA89E04 /* Pods_Lenna_chat_sdk_4Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF2AA896A8EA9CC258D1FE7 /* Pods_Lenna_chat_sdk_4Tests.framework */; };
@@ -164,8 +164,6 @@
 		D038F513255D3F6600F20AC5 /* MessageList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageList.xib; sourceTree = "<group>"; };
 		D038F515255D3F6600F20AC5 /* MessageConfirm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageConfirm.swift; sourceTree = "<group>"; };
 		D038F517255D3F6600F20AC5 /* MessageLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageLoading.swift; sourceTree = "<group>"; };
-		D038F519255D3F6600F20AC5 /* QuickButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickButtonCell.swift; sourceTree = "<group>"; };
-		D038F51A255D3F6600F20AC5 /* QuickButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuickButtonCell.xib; sourceTree = "<group>"; };
 		D038F51C255D3F6600F20AC5 /* ChatImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatImage.swift; sourceTree = "<group>"; };
 		D038F51D255D3F6600F20AC5 /* ChatImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatImage.xib; sourceTree = "<group>"; };
 		D038F51F255D3F6600F20AC5 /* MessageText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageText.swift; sourceTree = "<group>"; };
@@ -222,6 +220,8 @@
 		D038F560255D3F6700F20AC5 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
 		D038F562255D3F6700F20AC5 /* dot_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dot_loading.json; sourceTree = "<group>"; };
 		D038F564255D3F6700F20AC5 /* UIViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewHelper.swift; sourceTree = "<group>"; };
+		D0429EC62579F3850047F5B8 /* QuickButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickButtonCell.swift; sourceTree = "<group>"; };
+		D0429EC72579F3850047F5B8 /* QuickButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuickButtonCell.xib; sourceTree = "<group>"; };
 		D0C91BB0256F61DA00FCF230 /* GPSController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSController.swift; sourceTree = "<group>"; };
 		E86FF23572AFF104E5D24E8A /* Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests.debug.xcconfig"; path = "Target Support Files/Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests/Pods-Lenna_chat_sdk_4-Lenna_chat_sdk_4UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F053AA19E4E7C23675244078 /* Pods-Lenna_chat_sdk_4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lenna_chat_sdk_4.release.xcconfig"; path = "Target Support Files/Pods-Lenna_chat_sdk_4/Pods-Lenna_chat_sdk_4.release.xcconfig"; sourceTree = "<group>"; };
@@ -384,11 +384,11 @@
 		D038F505255D3F6600F20AC5 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				D0429EC52579F3850047F5B8 /* quickButton */,
 				D038F506255D3F6600F20AC5 /* messageMovie */,
 				D038F50F255D3F6600F20AC5 /* messageList */,
 				D038F514255D3F6600F20AC5 /* messageConfirm */,
 				D038F516255D3F6600F20AC5 /* messageLoading */,
-				D038F518255D3F6600F20AC5 /* quickButton */,
 				D038F51B255D3F6600F20AC5 /* messageImage */,
 				D038F51E255D3F6600F20AC5 /* messageText */,
 				D038F523255D3F6600F20AC5 /* messageWeather */,
@@ -442,15 +442,6 @@
 				D038F517255D3F6600F20AC5 /* MessageLoading.swift */,
 			);
 			path = messageLoading;
-			sourceTree = "<group>";
-		};
-		D038F518255D3F6600F20AC5 /* quickButton */ = {
-			isa = PBXGroup;
-			children = (
-				D038F519255D3F6600F20AC5 /* QuickButtonCell.swift */,
-				D038F51A255D3F6600F20AC5 /* QuickButtonCell.xib */,
-			);
-			path = quickButton;
 			sourceTree = "<group>";
 		};
 		D038F51B255D3F6600F20AC5 /* messageImage */ = {
@@ -638,6 +629,15 @@
 			path = helper;
 			sourceTree = "<group>";
 		};
+		D0429EC52579F3850047F5B8 /* quickButton */ = {
+			isa = PBXGroup;
+			children = (
+				D0429EC62579F3850047F5B8 /* QuickButtonCell.swift */,
+				D0429EC72579F3850047F5B8 /* QuickButtonCell.xib */,
+			);
+			path = quickButton;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -760,7 +760,6 @@
 				D038F572255D3F6700F20AC5 /* BtnMovie.xib in Resources */,
 				D038F4D2255D3A4A00F20AC5 /* Assets.xcassets in Resources */,
 				D038F573255D3F6700F20AC5 /* MessageMovie.xib in Resources */,
-				D038F57D255D3F6700F20AC5 /* QuickButtonCell.xib in Resources */,
 				D038F598255D3F6700F20AC5 /* MessageGrid.xib in Resources */,
 				D038F58C255D3F6700F20AC5 /* SummaryCell.xib in Resources */,
 				D038F59C255D3F6800F20AC5 /* detailSinopsisCell.xib in Resources */,
@@ -781,6 +780,7 @@
 				D038F4D0255D3A4300F20AC5 /* Main.storyboard in Resources */,
 				D038F5AE255D3F6800F20AC5 /* Assets.xcassets in Resources */,
 				D038F591255D3F6700F20AC5 /* CarouselViewCell.xib in Resources */,
+				D0429EC92579F3850047F5B8 /* QuickButtonCell.xib in Resources */,
 				D038F585255D3F6700F20AC5 /* WeatherCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -928,6 +928,7 @@
 				D038F5AC255D3F6800F20AC5 /* MessageTextType.swift in Sources */,
 				D038F5A6255D3F6800F20AC5 /* APIManager.swift in Sources */,
 				D038F56C255D3F6700F20AC5 /* AJDotLoadingView.swift in Sources */,
+				D0429EC82579F3850047F5B8 /* QuickButtonCell.swift in Sources */,
 				D038F56F255D3F6700F20AC5 /* MessageMovie.swift in Sources */,
 				D038F57E255D3F6700F20AC5 /* ChatImage.swift in Sources */,
 				D038F4C9255D3A4300F20AC5 /* AppDelegate.swift in Sources */,
@@ -939,7 +940,6 @@
 				D038F5AD255D3F6800F20AC5 /* MessageInput.swift in Sources */,
 				D038F569255D3F6700F20AC5 /* CustomAlertController.swift in Sources */,
 				D038F587255D3F6700F20AC5 /* MessageForm.swift in Sources */,
-				D038F57C255D3F6700F20AC5 /* QuickButtonCell.swift in Sources */,
 				D038F588255D3F6700F20AC5 /* FormCell.swift in Sources */,
 				D038F57B255D3F6700F20AC5 /* MessageLoading.swift in Sources */,
 				D038F56E255D3F6700F20AC5 /* BtnMovie.swift in Sources */,
@@ -1136,7 +1136,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = BDMCKR5737;
 				INFOPLIST_FILE = Lenna_chat_sdk_4/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -1157,7 +1157,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = BDMCKR5737;
 				INFOPLIST_FILE = Lenna_chat_sdk_4/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;

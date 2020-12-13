@@ -23,6 +23,7 @@ import SDWebImage
 
 class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDelegate, UITableViewDataSource, CarouselButtonMessageDelegate, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate, PulsaDelegate , confirmMessageDelegate, CLLocationManagerDelegate, ListMessageDelegate{
     
+    let msgLoading = MessageLoading()
     
     @IBOutlet weak var quickButtonCollection: UICollectionView!
     @IBOutlet weak var chatContainer: UIScrollView!
@@ -34,12 +35,9 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
     @IBOutlet weak var cornerRadius: UIView!
     @IBOutlet weak var mic: UIButton!
     @IBOutlet weak var logoHeader: UIImageView!
-    
     @IBOutlet weak var tookBar: UIView!
     
     var userInterfaceStyle : UIUserInterfaceStyle?
-    
-    
     var player : AVPlayer!
     let alertService = CustomAlertService()
     var base_url = "https://app.lenna.ai/app/public/api/\(Constan.BOT_ID)/webhook/mobile"
@@ -85,8 +83,8 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
     var timer3 = Timer()
     
     //
-    
     private var finishedLoadingInitialTableCells = false
+    
     
     override func viewDidAppear(_ animated: Bool) {
     }
@@ -127,36 +125,35 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        requestTranscribePermissions()
         setLogoHeader()
         mic.isEnabled = false  //2
         speechRecognizer?.delegate = self as? SFSpeechRecognizerDelegate  //3
         SFSpeechRecognizer.requestAuthorization { (authStatus) in  //4
-                  
-                  var isButtonEnabled = false
-                  
-                  switch authStatus {  //5
-                  case .authorized:
-                      isButtonEnabled = true
-                      
-                  case .denied:
-                      isButtonEnabled = false
-                      print("User denied access to speech recognition")
-                      
-                  case .restricted:
-                      isButtonEnabled = false
-                      print("Speech recognition restricted on this device")
-                      
-                  case .notDetermined:
-                      isButtonEnabled = false
-                      print("Speech recognition not yet authorized")
-                  }
-                  
-                  OperationQueue.main.addOperation() {
-                      self.mic.isEnabled = isButtonEnabled
-                  }
-              }
-
+            
+            var isButtonEnabled = false
+            
+            switch authStatus {  //5
+            case .authorized:
+                isButtonEnabled = true
+                
+            case .denied:
+                isButtonEnabled = false
+                print("User denied access to speech recognition")
+                
+            case .restricted:
+                isButtonEnabled = false
+                print("Speech recognition restricted on this device")
+                
+            case .notDetermined:
+                isButtonEnabled = false
+                print("Speech recognition not yet authorized")
+            }
+            
+            OperationQueue.main.addOperation() {
+                self.mic.isEnabled = isButtonEnabled
+            }
+        }
+        
         let audioSession = AVAudioSession.sharedInstance()
         do {
             try audioSession.setCategory(AVAudioSessionCategoryPlayback, mode: AVAudioSessionModeDefault)
@@ -170,25 +167,25 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
             if #available(iOS 13.0, *) {
                 self.chatMessage.backgroundColor = .secondarySystemBackground
                 self.tookBar.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-                
-                //                leftButton.setImage(#imageLiteral(resourceName: "ic_menu_dark"), for: .normal)
+                //set cornerRadius
+                cornerRadius.layer.cornerRadius = 12
+                self.cornerRadius.backgroundColor = .secondarySystemBackground
+              
             } else {
                 // Fallback on earlier versions
                 self.chatMessage.backgroundColor = .white
-                //                leftButton.setImage(#imageLiteral(resourceName: "ic_menu"), for: .normal)
                 
             }
         } else {
             // User Interface is Light
             self.chatMessage.backgroundColor = .white
-            //            leftButton.setImage(#imageLiteral(resourceName: "ic_menu"), for: .normal)
+            //set cornerRadius
+            cornerRadius.layer.cornerRadius = 12
+            //set background text field
+            chatMessage.layer.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.937254902, alpha: 1)
             
         }
-        //set cornerRadius
-        cornerRadius.layer.cornerRadius = 12
-        //set background text field
-        chatMessage.layer.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.937254902, alpha: 1)
-        
+       
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.requestWhenInUseAuthorization()
@@ -200,10 +197,8 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
             if granted {
-                print("Yay!")
                 
             } else {
-                print("D'oh")
                 //                self.customAlert(title: "error", message: "Alarm not authorize")
                 let alertVC = self.alertService.alert(title: "Perhatian !", message: "Izin penggunaan fitur alarm tidak di izinkan", image: "ic_alert_warning", headerColor: "#FF9900", id: 0){
                     // no action
@@ -258,8 +253,8 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
         
         
         configureTableView()
-        
-        chatTableView.separatorStyle = .none
+        // separator
+//        chatTableView.separatorStyle = .none
         
         showNavItem()
         
@@ -274,7 +269,7 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
         
         //
-//        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil) NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        //        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil) NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         
         var screenHeight: CGFloat {
@@ -295,11 +290,11 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
         
-        layout.itemSize = CGSize(width: (width - 50) / (3), height: 20)
+        layout.itemSize = CGSize(width: (width - 50) / (3), height: 50)
         
         quickButtonCollection.alpha = 0
         
-       
+        
     }
     
     //Write the didFailWithError method here:
@@ -332,13 +327,11 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
             
             if userInterfaceStyle1 == .dark {
                 self.chatMessage.backgroundColor = .secondarySystemBackground
-                //               leftButton.setImage(#imageLiteral(resourceName: "ic_menu_dark"), for: .normal)
                 print("dark mode")
                 
             } else {
                 
                 self.chatMessage.backgroundColor = .white
-                //                leftButton.setImage(#imageLiteral(resourceName: "ic_menu"), for: .normal)
                 
             }
         }
@@ -515,7 +508,12 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
         getResponChat(newMessage: newMessage)
     }
     
-    
+    func tableView2(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         let cell : MessageLoading! = tableView.dequeueReusableCell( withIdentifier: cellLoadingMessage) as? MessageLoading
+        
+        return cell
+        
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let chatinfo = newMessageArray[indexPath.row]
@@ -526,7 +524,6 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
             cell.bubleBackgroundView.image = cell.bubbleImage
             cell.messageLabel.textColor = .white
             cell.messageTime.textColor = .white
-            
             
             cell.leadingConstraint.isActive = false
             cell.trailingConstraint.isActive = true
@@ -566,11 +563,26 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
                 
                 let cell : MessageText! = tableView.dequeueReusableCell( withIdentifier: cellTextMessage) as? MessageText
                 
-                cell.bubleBackgroundView.image = cell.bubbleImage
-                cell.messageLabel.textColor = .black
-                cell.messageTime.textColor = .black
+                if self.traitCollection.userInterfaceStyle == .dark {
+                    // User Interface is Dark
+                    if #available(iOS 13.0, *) {
+                        cell.bubleBackgroundView.image = cell.bubbleImage_dark
+                        cell.messageLabel.textColor = .white
+                        cell.messageTime.textColor = .white
+                        
+                    } else {
+                       
+                        
+                    }
+                } else {
+                    cell.bubleBackgroundView.image = cell.bubbleImage
+                    cell.messageLabel.textColor = .black
+                    cell.messageTime.textColor = .black
+                }
+                
+               
                 cell.imageCircle.image = cell.cImage!
-                let frame = CGRect(x: 5, y: 5, width: 50, height: 50)
+                let frame = CGRect(x: 10, y: 5, width: 50, height: 50)
                 cell.imageCircle.frame = frame
                 cell.leadingConstraint.isActive = true
                 cell.trailingConstraint.isActive = false
@@ -589,19 +601,29 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
                 
                let cell : MessageLoading! = tableView.dequeueReusableCell( withIdentifier: cellLoadingMessage) as? MessageLoading
                 
-                             
-                cell.bubleBackgroundView.image = cell.bubbleImage
-                cell.animationView.play()
-//                cell.messageLabel.text = ". . ."
-//                cell.messageLabel.textColor = .black
+                if self.traitCollection.userInterfaceStyle == .dark {
+                    // User Interface is Dark
+                    if #available(iOS 13.0, *) {
+                      
+                        cell.bubleBackgroundView.image = cell.bubbleImage_dark
 
-                cell.bubleBackgroundView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                    } else {
+                        
+                        cell.bubleBackgroundView.image = cell.bubbleImage
+                        
+                    }
+                } else {
+                   cell.bubleBackgroundView.image = cell.bubbleImage
+                    
+                }
+                
+                cell.bubleBackgroundView.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 0)
                 
                 cell.leadingConstraint.isActive = true
                 cell.trailingConstraint.isActive = false
                                
-                
                 cell.selectionStyle = .none
+//                cell.animationView.play()
                 
                 return cell
                 
@@ -786,7 +808,8 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
                     }
                     
                 }
-                
+            
+
                 cell.carouselImage.reloadData()
                 
                 cell.btnMessageDelegate = self
@@ -959,11 +982,33 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
                         let data = Data(arrHtml.html.utf8)
                         if let attributedString = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) {
                             cell.htmlData.attributedText = attributedString
+                            cell.htmlData.layer.borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+                            cell.htmlData.layer.borderWidth = 0.5
+                            cell.htmlData.layer.cornerRadius = 10
+                            cell.htmlData.clipsToBounds = true
+
                             //set  wrapcontent
                             cell.htmlData.translatesAutoresizingMaskIntoConstraints = true
                             cell.htmlData.font =  UIFont(name: "SFProText-Regular", size: 16)!
                             cell.htmlData.sizeToFit()
                             cell.htmlData.isScrollEnabled = false
+                            if self.traitCollection.userInterfaceStyle == .dark {
+                                // User Interface is Dark
+                                if #available(iOS 13.0, *) {
+                                    cell.htmlData.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                                    cell.htmlData.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+                                    cell.htmlData.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+
+                                } else {
+                                    cell.htmlData.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                                    cell.htmlData.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+                                    cell.htmlData.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+
+                                }
+                            } else {
+                                
+                            }
+                                  
                         }
                         
                     }
@@ -1062,7 +1107,7 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
     
     func configureTableView() {
         chatTableView.rowHeight = UITableViewAutomaticDimension
-        chatTableView.estimatedRowHeight = 400.0
+        chatTableView.estimatedRowHeight = 430.0
         
     }
     
@@ -1757,47 +1802,40 @@ extension ChatViewController : UICollectionViewDelegate, UICollectionViewDataSou
         }
         else {
             if arrQuickButton.quickbutton != nil {
-                cell.quickButton.setTitle(arrQuickButton.quickbutton[indexPath.item], for: .normal)
-                cell.quickButton.addTarget(self, action: #selector(quickBtnTapped), for: .touchUpInside)
-                cell.quickButton.tag = indexPath.row
                 
-                // in swift 5
+                cell.quickButton.setTitle(arrQuickButton.quickbutton[indexPath.item], for: .normal)
+                
                 cell.layer.borderWidth = 1
                 cell.layer.borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
                 cell.layer.cornerRadius = 20
                 
+                cell.quickButton.tag = indexPath.row
+                cell.quickButton.addTarget(self, action: #selector(quickBtnTapped), for: .touchUpInside)
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.1, execute: {
                     let indexPath = IndexPath(row: self.newMessageArray.count-1, section: 0)
                     self.chatTableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.bottom, animated: true)
                 })
-                
+               
+
             }else {
+                
                 cell.quickButton.setTitle("option1", for: .normal)
             }
+            
+            cell.quickButton.addTarget(self, action: #selector(quickBtnTapped), for: .touchUpInside)
         }
         
         return cell
     }
     
-    @objc func quickBtnTapped (sender : UIButton) {
+    @objc func quickBtnTapped (_ sender:UIButton) {
         self.quickButtonCollection.alpha = 0
         chatInput(newMessage: arrQuickButton.quickbutton[sender.tag])
         getResponChat(newMessage: arrQuickButton.quickbutton[sender.tag])
     }
     
     func requestTranscribePermissions() {
-//        SFSpeechRecognizer.requestAuthorization { [unowned self] authStatus in
-//            DispatchQueue.main.async {
-//                if authStatus == .authorized {
-//                    print("SFSpeechRecognizer ok")
-//                    self.mic.isEnabled = true
-//                } else {
-//                    print("Transcription permission was declined.")
-//                    self.handlePermissionFailed()
-//                }
-//            }
-//        }
-        
+
         speechRecognizer?.delegate = self as? SFSpeechRecognizerDelegate  //3
         
         SFSpeechRecognizer.requestAuthorization { (authStatus) in  //4
@@ -1934,12 +1972,18 @@ extension ChatViewController : UICollectionViewDelegate, UICollectionViewDataSou
             print("interval stop....")
             let a =  chat.replacingOccurrences(of: "(", with: "")
             let b =  a.replacingOccurrences(of: ")", with: "")
-            self.chatMessage.text = chat
+           
             print(chat)
             self.recognitionTask?.cancel()
             self.audioEngine.stop()
             self.mic.setImage(UIImage(named: "icon_mic"), for: .normal)
-            self.sendToChat(text: b)
+            if (b == "Dufann"){
+                self.chatMessage.text = "Dufan"
+                self.sendToChat(text: "Dufan")
+            }else{
+                self.chatMessage.text = b
+                self.sendToChat(text: b)
+            }
         })
         
     }

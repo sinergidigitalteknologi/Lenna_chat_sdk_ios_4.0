@@ -40,19 +40,24 @@ class CarouselViewCell: UICollectionViewCell, UITableViewDelegate, UITableViewDa
         btnList.delegate = self
         btnList.dataSource = self
         
+      
+        
         btnList.register(UINib(nibName: "ButtonCarousel", bundle: nil), forCellReuseIdentifier: "ButtonCarousel")
         
-        btnList.estimatedRowHeight = 20.0
+        btnList.estimatedRowHeight = 25.0
         
         if self.traitCollection.userInterfaceStyle == .dark {
             // User Interface is Dark
             if #available(iOS 13.0, *) {
                 self.mainBg.backgroundColor = .secondarySystemBackground
                 self.title.textColor = .white
+                self.subTitle.textColor = .white
                 self.title.backgroundColor = .secondarySystemBackground
                 layer.cornerRadius = 12
                 contentView.layer.cornerRadius = 12
-                contentView.layer.masksToBounds = true
+                contentView.layer.masksToBounds = false
+                layer.masksToBounds = false
+
                 
                 layer.backgroundColor = UIColor.secondarySystemBackground.cgColor
 
@@ -65,7 +70,7 @@ class CarouselViewCell: UICollectionViewCell, UITableViewDelegate, UITableViewDa
                 layer.cornerRadius = 12
                 
                 contentView.layer.cornerRadius = 12
-                contentView.layer.masksToBounds = true
+                contentView.layer.masksToBounds = false
                 
                 layer.backgroundColor = UIColor.white.cgColor
 
@@ -73,17 +78,22 @@ class CarouselViewCell: UICollectionViewCell, UITableViewDelegate, UITableViewDa
             layer.borderWidth = 0
             print("dark mode")
         }else {
+            print("CarouselViewCell awakeFromNib light mode")
+
             self.mainBg.backgroundColor = .white
+
             self.title.textColor = .darkGray
+            self.subTitle.textColor = .darkGray
+
             self.title.backgroundColor = .white
             layer.cornerRadius = 12
             contentView.layer.cornerRadius = 12
             contentView.layer.borderWidth = 0.7
             contentView.layer.borderColor = UIColor.clear.cgColor
-            contentView.layer.masksToBounds = true
+            contentView.layer.masksToBounds = false
             
             layer.shadowColor = UIColor.lightGray.cgColor
-            layer.shadowOffset = CGSize(width: 0, height: 0.75)
+            layer.shadowOffset = CGSize(width: 0, height: 0.05)
             layer.shadowRadius = 3
             layer.shadowOpacity = 0.7
             layer.masksToBounds = false
@@ -91,10 +101,16 @@ class CarouselViewCell: UICollectionViewCell, UITableViewDelegate, UITableViewDa
             layer.backgroundColor = UIColor.white.cgColor
 
         }
+        //set on line false
+        subTitle.numberOfLines = 0
+         //   subTitle.lineBreakMode = .byTruncatingTail
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
+        //set on line false
+            subTitle.adjustsFontSizeToFitWidth = false
+            subTitle.lineBreakMode = .byTruncatingTail
         
         let userInterfaceStyle1 = traitCollection.userInterfaceStyle // Either .unspecified, .light, or .dark
         // Update your user interface based on the appearance
@@ -109,14 +125,14 @@ class CarouselViewCell: UICollectionViewCell, UITableViewDelegate, UITableViewDa
                 print("dark mode")
                 
                 contentView.layer.cornerRadius = 12
-                contentView.layer.masksToBounds = true
+                contentView.layer.masksToBounds = false
                 
               
                 layer.backgroundColor = UIColor.secondarySystemBackground.cgColor
 
                 
             } else {
-                print("light mode")
+                print("CarouselViewCell traitCollectionDidChange light mode")
                 self.mainBg.backgroundColor = .white
                 self.title.textColor = .darkGray
                 self.title.backgroundColor = .white
@@ -125,10 +141,10 @@ class CarouselViewCell: UICollectionViewCell, UITableViewDelegate, UITableViewDa
                 contentView.layer.cornerRadius = 12
                 contentView.layer.borderWidth = 0.7
                 contentView.layer.borderColor = UIColor.clear.cgColor
-                contentView.layer.masksToBounds = true
+                contentView.layer.masksToBounds = false
                 
                 layer.shadowColor = UIColor.lightGray.cgColor
-                layer.shadowOffset = CGSize(width: 0, height: 0.75)
+                layer.shadowOffset = CGSize(width: 0, height: 0.15)
                 layer.shadowRadius = 3
                 layer.shadowOpacity = 0.7
                 layer.masksToBounds = false
@@ -136,6 +152,7 @@ class CarouselViewCell: UICollectionViewCell, UITableViewDelegate, UITableViewDa
                 layer.backgroundColor = UIColor.white.cgColor
 
             }
+            
         }
     }
 
@@ -166,10 +183,9 @@ class CarouselViewCell: UICollectionViewCell, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         print("CarouselViewCell tableView size",self.btnList.contentSize.height)
         
-
-        if arrAction.count == 1 {
-            marginTop.constant = self.btnList.contentSize.height
-        }
+//        if arrAction.count == 1 {
+//            marginTop.constant = self.btnList.contentSize.height
+//        }
     }
     
     @objc func buttonSelected(sender: UIButton){

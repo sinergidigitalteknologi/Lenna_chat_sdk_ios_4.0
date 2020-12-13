@@ -19,6 +19,9 @@ class MessageLoading: UITableViewCell {
     let bubbleImage = UIImage(named: "bubble_received2")?
            .resizableImage(withCapInsets: UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5),
                            resizingMode: .stretch)
+    let bubbleImage_dark = UIImage(named: "bubble_received_dark")?
+    .resizableImage(withCapInsets: UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5),
+                    resizingMode: .stretch)
     let bubbleImage2 = UIImage(named: "loading")
     let loadingImage = UIImage.animatedImageNamed("loading", duration: 1.0)
     var leadingConstraint: NSLayoutConstraint!
@@ -72,6 +75,9 @@ class MessageLoading: UITableViewCell {
         
         trailingConstraint = loadingChat.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32)
         trailingConstraint.isActive = true
+        animationView.loopMode = .loop
+        animationView.play()
+
         
     }
     

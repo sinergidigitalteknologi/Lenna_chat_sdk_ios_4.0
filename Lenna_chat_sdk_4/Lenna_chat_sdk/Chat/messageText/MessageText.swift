@@ -17,6 +17,9 @@ class MessageText: UITableViewCell {
     let bubbleImage = UIImage(named: "bubble_received2")?
         .resizableImage(withCapInsets: UIEdgeInsets(top: 17, left: 21, bottom: 17, right: 21),
                         resizingMode: .stretch)
+    let bubbleImage_dark = UIImage(named: "bubble_received_dark")?
+     .resizableImage(withCapInsets: UIEdgeInsets(top: 17, left: 21, bottom: 17, right: 21),
+                           resizingMode: .stretch)
     let cImage = UIImage(named: Constan.LOGO_BUBLE_CHAT)?
            .resizableImage(withCapInsets: UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5),
                            resizingMode: .stretch)
@@ -68,7 +71,7 @@ class MessageText: UITableViewCell {
             messageTime.leadingAnchor.constraint(equalTo: bubleBackgroundView.leadingAnchor, constant: 20),
             
             bubleBackgroundView.topAnchor.constraint(equalTo: messageLabel.topAnchor, constant: -8),
-            bubleBackgroundView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 55),
+            bubleBackgroundView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 60),
             bubleBackgroundView.bottomAnchor.constraint(equalTo: messageTime.bottomAnchor, constant: 8),
             bubleBackgroundView.trailingAnchor.constraint(equalTo: messageLabel.trailingAnchor, constant: 20),
            
@@ -76,7 +79,7 @@ class MessageText: UITableViewCell {
         
         NSLayoutConstraint.activate(constraints)
         
-        leadingConstraint = messageLabel.leadingAnchor.constraint(equalTo: bubleBackgroundView.leadingAnchor, constant: 20)
+        leadingConstraint = messageLabel.leadingAnchor.constraint(equalTo: bubleBackgroundView.leadingAnchor, constant: 10)
         leadingConstraint.isActive = false
         
         trailingConstraint = messageLabel.trailingAnchor.constraint(equalTo: bubleBackgroundView.trailingAnchor, constant: -20)

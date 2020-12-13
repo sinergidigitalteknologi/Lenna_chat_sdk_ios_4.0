@@ -71,12 +71,16 @@ class MessageCarousel: UITableViewCell, UICollectionViewDelegate, UICollectionVi
         cell.imageArrayCarousel.layer.cornerRadius = 12
         cell.imageArrayCarousel.layer.maskedCorners = [.layerMaxXMinYCorner , .layerMinXMinYCorner]
         let clear_text = dataCarousel.title.replacingOccurrences(of: "<br>", with: "")
+        let clear_text_des = dataCarousel.text.replacingOccurrences(of: "<br>", with: "")
         cell.title.text = clear_text
+        cell.subTitle.text = clear_text_des
+//        cell.subTitle.lineBreakMode = .byWordWrapping
+//        cell.subTitle.textAlignment = .left
 
         cell.btnDelegate = self
         
         cell.arrAction = dataCarousel.actions
-        cell.btnList.rowHeight = CGFloat(80/cell.arrAction.count)
+        cell.btnList.rowHeight = UITableViewAutomaticDimension
         
         cell.btnList.reloadData()
     

@@ -10,55 +10,51 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="MessageCarousel" rowHeight="390" id="KGk-i7-Jjw" customClass="MessageCarousel" customModule="Lenna_chat_sdk_4" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="330"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="MessageCarousel" rowHeight="390" id="WKc-kM-mic" customClass="MessageCarousel" customModule="Lenna_chat_sdk_4" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="390"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="330"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="WKc-kM-mic" id="41W-wm-Z1c">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="390"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MRQ-CS-4Ib">
-                        <rect key="frame" x="0.0" y="5" width="320" height="319.5"/>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ka-My-06U">
+                        <rect key="frame" x="0.0" y="5" width="320" height="380"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="250" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="szC-oa-XhH">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="319.5"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="250" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xBr-1f-Axf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="390"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="319.5" id="tTS-m4-1Tk"/>
+                                    <constraint firstAttribute="height" constant="390" id="vQZ-Hg-HhI"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="Zk4-qG-Tip">
-                                    <size key="itemSize" width="250" height="300"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="djK-7X-5v3">
+                                    <size key="itemSize" width="250" height="350"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <connections>
-                                    <outlet property="dataSource" destination="-1" id="RMj-lR-hCm"/>
-                                    <outlet property="delegate" destination="-1" id="SK9-dk-v2I"/>
-                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="szC-oa-XhH" secondAttribute="trailing" id="0FU-cq-2LS"/>
-                            <constraint firstAttribute="bottom" secondItem="szC-oa-XhH" secondAttribute="bottom" id="38F-Lz-6lQ"/>
-                            <constraint firstItem="szC-oa-XhH" firstAttribute="top" secondItem="MRQ-CS-4Ib" secondAttribute="top" id="LQc-2L-ar2"/>
-                            <constraint firstItem="szC-oa-XhH" firstAttribute="leading" secondItem="MRQ-CS-4Ib" secondAttribute="leading" id="heN-Ha-bEm"/>
+                            <constraint firstAttribute="trailing" secondItem="xBr-1f-Axf" secondAttribute="trailing" id="1Oe-Vq-za0"/>
+                            <constraint firstItem="xBr-1f-Axf" firstAttribute="top" secondItem="4Ka-My-06U" secondAttribute="top" id="8wX-j5-2MM"/>
+                            <constraint firstItem="xBr-1f-Axf" firstAttribute="leading" secondItem="4Ka-My-06U" secondAttribute="leading" id="DrO-P4-3dB"/>
+                            <constraint firstAttribute="bottom" secondItem="xBr-1f-Axf" secondAttribute="bottom" id="mka-bU-iM1"/>
                         </constraints>
                     </view>
                 </subviews>
                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="MRQ-CS-4Ib" secondAttribute="bottom" constant="5" id="1nv-3z-Osu"/>
-                    <constraint firstItem="MRQ-CS-4Ib" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9Wc-ey-8KW"/>
-                    <constraint firstAttribute="trailing" secondItem="MRQ-CS-4Ib" secondAttribute="trailing" id="CuG-W5-081"/>
-                    <constraint firstItem="MRQ-CS-4Ib" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="K24-bk-L0j"/>
+                    <constraint firstAttribute="trailing" secondItem="4Ka-My-06U" secondAttribute="trailing" id="Ksr-Ww-laN"/>
+                    <constraint firstAttribute="bottom" secondItem="4Ka-My-06U" secondAttribute="bottom" constant="5" id="WLj-HR-N6k"/>
+                    <constraint firstItem="4Ka-My-06U" firstAttribute="top" secondItem="41W-wm-Z1c" secondAttribute="top" constant="5" id="aiu-Et-dws"/>
+                    <constraint firstItem="4Ka-My-06U" firstAttribute="leading" secondItem="41W-wm-Z1c" secondAttribute="leading" id="jaa-qI-YOA"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <viewLayoutGuide key="safeArea" id="cqU-NQ-cCx"/>
             <connections>
-                <outlet property="carouselImage" destination="szC-oa-XhH" id="Al7-Wc-AI9"/>
+                <outlet property="carouselImage" destination="xBr-1f-Axf" id="IIu-KG-jA7"/>
             </connections>
             <point key="canvasLocation" x="137.59999999999999" y="103.44827586206897"/>
         </tableViewCell>

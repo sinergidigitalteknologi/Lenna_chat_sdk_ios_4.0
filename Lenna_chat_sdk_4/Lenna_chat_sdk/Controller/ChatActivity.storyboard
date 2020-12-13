@@ -31,7 +31,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t9a-zC-9Ny">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="5" sectionFooterHeight="5" translatesAutoresizingMaskIntoConstraints="NO" id="t9a-zC-9Ny">
                                 <rect key="frame" x="0.0" y="96" width="414" height="649"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
@@ -55,7 +55,7 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YcL-eO-k0Z">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdE-1N-twU">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KdE-1N-twU">
                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
@@ -64,8 +64,8 @@
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="Lta-C0-MFd" id="6iv-Qq-Fzh"/>
-                                    <outlet property="delegate" destination="Lta-C0-MFd" id="2MV-vd-AdY"/>
+                                    <outlet property="dataSource" destination="Lta-C0-MFd" id="qs0-iK-4Ur"/>
+                                    <outlet property="delegate" destination="Lta-C0-MFd" id="S61-02-SN3"/>
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="blQ-rE-eaB" userLabel="Fake Header">
@@ -76,10 +76,10 @@
                                 <viewLayoutGuide key="safeArea" id="EQb-77-Hbv"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r8H-OZ-rvS" userLabel="Compose View">
-                                <rect key="frame" x="20" y="797" width="374" height="60"/>
+                                <rect key="frame" x="10" y="797" width="394" height="60"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Klik untuk mengetik" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="egM-LK-hIG">
-                                        <rect key="frame" x="8" y="10" width="273" height="40"/>
+                                        <rect key="frame" x="8" y="10" width="293" height="40"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="o6t-2o-XwL"/>
@@ -96,7 +96,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="le4-bU-DVL">
-                                        <rect key="frame" x="331" y="13" width="35" height="32"/>
+                                        <rect key="frame" x="351" y="13" width="35" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="9Yn-7H-aqO"/>
                                             <constraint firstAttribute="height" constant="32" id="uBc-9c-v8E"/>
@@ -107,7 +107,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfb-J1-UNK">
-                                        <rect key="frame" x="293" y="15" width="30" height="30"/>
+                                        <rect key="frame" x="313" y="15" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="bQ7-6m-Gi4"/>
                                             <constraint firstAttribute="width" constant="30" id="j95-oX-qog"/>
@@ -159,8 +159,8 @@
                             <constraint firstItem="t9a-zC-9Ny" firstAttribute="trailing" secondItem="8ph-lz-fVM" secondAttribute="trailing" id="HXO-Mf-2am"/>
                             <constraint firstItem="t9a-zC-9Ny" firstAttribute="top" secondItem="FqK-oO-ymg" secondAttribute="bottom" constant="1" id="IMR-Ng-YNU"/>
                             <constraint firstItem="sRf-ls-8tk" firstAttribute="top" secondItem="t9a-zC-9Ny" secondAttribute="bottom" constant="1" id="IXZ-5Z-syr"/>
-                            <constraint firstItem="8ph-lz-fVM" firstAttribute="trailing" secondItem="r8H-OZ-rvS" secondAttribute="trailing" constant="20" id="O4e-m8-USQ"/>
-                            <constraint firstItem="r8H-OZ-rvS" firstAttribute="leading" secondItem="8ph-lz-fVM" secondAttribute="leading" constant="20" id="O4q-rh-fxa"/>
+                            <constraint firstItem="8ph-lz-fVM" firstAttribute="trailing" secondItem="r8H-OZ-rvS" secondAttribute="trailing" constant="10" id="O4e-m8-USQ"/>
+                            <constraint firstItem="r8H-OZ-rvS" firstAttribute="leading" secondItem="8ph-lz-fVM" secondAttribute="leading" constant="10" id="O4q-rh-fxa"/>
                             <constraint firstItem="FqK-oO-ymg" firstAttribute="leading" secondItem="8ph-lz-fVM" secondAttribute="leading" id="TKt-rk-9Ga"/>
                             <constraint firstItem="sRf-ls-8tk" firstAttribute="trailing" secondItem="8ph-lz-fVM" secondAttribute="trailing" id="nBi-nf-5I6"/>
                             <constraint firstItem="r8H-OZ-rvS" firstAttribute="top" secondItem="sRf-ls-8tk" secondAttribute="bottom" constant="1" id="qhc-ah-4e0"/>
@@ -178,7 +178,7 @@
                         <outlet property="fakeHeader" destination="blQ-rE-eaB" id="Dmb-km-WvS"/>
                         <outlet property="logoHeader" destination="xTQ-35-eAe" id="fdk-Qk-slU"/>
                         <outlet property="mic" destination="le4-bU-DVL" id="LH5-ZM-etv"/>
-                        <outlet property="quickButtonCollection" destination="sRf-ls-8tk" id="CyF-3s-XEp"/>
+                        <outlet property="quickButtonCollection" destination="sRf-ls-8tk" id="JTc-MG-Zrr"/>
                         <outlet property="sendbutton" destination="tfb-J1-UNK" id="sLC-Te-jJF"/>
                         <outlet property="tookBar" destination="FqK-oO-ymg" id="wPF-Ay-V9P"/>
                     </connections>

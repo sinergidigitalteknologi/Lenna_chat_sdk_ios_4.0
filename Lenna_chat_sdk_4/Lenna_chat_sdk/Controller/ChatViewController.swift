@@ -50,6 +50,8 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
     fileprivate let cellTextMessage = "MessageText"
     fileprivate let cellImageMessage = "MessageImage"
     fileprivate let cellCarouselMessage = "MessageCarousel"
+    fileprivate let cellCarouselMessage2 = "MessageCarousel2"
+
     fileprivate let cellLoadingMessage = "MessageLoading"
     fileprivate let cellFormMessage = "MessageForm"
     fileprivate let cellFormAirplaneMessage = "MessageAirplaneForm"
@@ -236,6 +238,8 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
         
         chatTableView.register(UINib(nibName: "MessageCarousel", bundle: nil), forCellReuseIdentifier: "MessageCarousel")
         
+        chatTableView.register(UINib(nibName: "MessageCarousel2", bundle: nil), forCellReuseIdentifier: "MessageCarousel2")
+        
         chatTableView.register(UINib(nibName: "MessageMovie", bundle: nil), forCellReuseIdentifier: "MessageMovie")
         
         chatTableView.register(UINib(nibName: "MessageGrid", bundle: nil), forCellReuseIdentifier: "MessageGrid")
@@ -254,7 +258,7 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
         
         configureTableView()
         // separator
-//        chatTableView.separatorStyle = .none
+        chatTableView.separatorStyle = .none
         
         showNavItem()
         
@@ -800,17 +804,28 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
                 
             else if chatinfo.type == "carousel"{
                 
-                let cell : MessageCarousel! = tableView.dequeueReusableCell( withIdentifier: cellCarouselMessage) as? MessageCarousel
+                var cell : MessageCarousel! = nil
                 
                 for arrCarousel in chatinfo.messageCarousel {
                     if arrCarousel.columns != nil {
-                        cell.arrCarousel = arrCarousel.columns
+                        let countBtn =  arrCarousel.columns[0]
+                        print("MessageCarousel height 1 carousel, ",countBtn.actions.count);
+                        if(countBtn.actions.count > 1){
+                            cell =  tableView.dequeueReusableCell( withIdentifier: cellCarouselMessage) as? MessageCarousel
+                            cell.arrCarousel = arrCarousel.columns
+                            cell.carouselImage.reloadData()
+
+                        }else{
+                            cell =  tableView.dequeueReusableCell( withIdentifier: cellCarouselMessage2) as? MessageCarousel
+                            cell.arrCarousel = arrCarousel.columns
+                            cell.carouselImage.reloadData()
+
+                        }
                     }
                     
                 }
             
-
-                cell.carouselImage.reloadData()
+                
                 
                 cell.btnMessageDelegate = self
                 
@@ -856,7 +871,8 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
                 }
                 
                 cell.selectionStyle = .none
-                
+               
+
                 cell.carouselImage.reloadData()
                 
                 return cell

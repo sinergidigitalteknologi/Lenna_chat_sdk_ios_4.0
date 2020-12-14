@@ -28,6 +28,7 @@ class MessageCarousel: UITableViewCell, UICollectionViewDelegate, UICollectionVi
         self.carouselImage.dataSource = self
         self.carouselImage.delegate = self
         self.carouselImage.register(UINib.init(nibName: "CarouselViewCell", bundle: nil), forCellWithReuseIdentifier: "carouselViewID")
+      
         
         
 //        let layout = self.carouselImage.collectionViewLayout as! UICollectionViewFlowLayout
@@ -74,12 +75,11 @@ class MessageCarousel: UITableViewCell, UICollectionViewDelegate, UICollectionVi
         let clear_text_des = dataCarousel.text.replacingOccurrences(of: "<br>", with: "")
         cell.title.text = clear_text
         cell.subTitle.text = clear_text_des
-//        cell.subTitle.lineBreakMode = .byWordWrapping
-//        cell.subTitle.textAlignment = .left
 
         cell.btnDelegate = self
         
         cell.arrAction = dataCarousel.actions
+        //auto height
         cell.btnList.rowHeight = UITableViewAutomaticDimension
         
         cell.btnList.reloadData()
@@ -92,6 +92,8 @@ class MessageCarousel: UITableViewCell, UICollectionViewDelegate, UICollectionVi
         
         print("MessageCarousel->2",arrCarousel[indexPath.item])
     }
+    
+    
     
 
 }

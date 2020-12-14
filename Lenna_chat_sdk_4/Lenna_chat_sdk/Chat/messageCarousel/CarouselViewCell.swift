@@ -14,16 +14,18 @@ protocol CarouselButtonDelegate {
 }
 
 
-class CarouselViewCell: UICollectionViewCell, UITableViewDelegate, UITableViewDataSource {
+class CarouselViewCell: UICollectionViewCell, UITableViewDelegate, UITableViewDataSource,UICollectionViewDelegateFlowLayout
+ {
 
+//    @IBOutlet weak var carouselView: UICollectionViewCell!
     @IBOutlet weak var mainBg: UIView!
     @IBOutlet weak var imageArrayCarousel: UIImageView!
     @IBOutlet weak var btnList: UITableView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var subTitle: UILabel!
     @IBOutlet weak var buttonHeight: NSLayoutConstraint!
-    
     @IBOutlet weak var marginTop: NSLayoutConstraint!
+    
     
     var userInterfaceStyle : UIUserInterfaceStyle?
     
@@ -97,7 +99,7 @@ class CarouselViewCell: UICollectionViewCell, UITableViewDelegate, UITableViewDa
             layer.shadowRadius = 3
             layer.shadowOpacity = 0.7
             layer.masksToBounds = false
-            layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: contentView.layer.cornerRadius).cgPath
+//            layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: contentView.layer.cornerRadius).cgPath
             layer.backgroundColor = UIColor.white.cgColor
 
         }
@@ -148,7 +150,7 @@ class CarouselViewCell: UICollectionViewCell, UITableViewDelegate, UITableViewDa
                 layer.shadowRadius = 3
                 layer.shadowOpacity = 0.7
                 layer.masksToBounds = false
-                layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: contentView.layer.cornerRadius).cgPath
+//                layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: contentView.layer.cornerRadius).cgPath
                 layer.backgroundColor = UIColor.white.cgColor
 
             }
@@ -218,10 +220,9 @@ class CarouselViewCell: UICollectionViewCell, UITableViewDelegate, UITableViewDa
         
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableView.automaticDimension
-//
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 10, height: 10)
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }

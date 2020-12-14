@@ -34,7 +34,7 @@ class ButtonCarousel: UITableViewCell {
         }else {
             layer.backgroundColor = UIColor.white.cgColor
              contentView.backgroundColor = UIColor.white
-            btnAction.backgroundColor = .brown
+            btnAction.backgroundColor = .white
             print("light mode")
         }
         btnAction.titleLabel?.lineBreakMode = .byWordWrapping

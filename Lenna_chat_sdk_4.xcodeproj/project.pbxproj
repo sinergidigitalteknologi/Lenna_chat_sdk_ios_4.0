@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A884B7D2722E613A62256276 /* Pods_Lenna_chat_sdk_4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6638E0E762B298C6D4B6A74E /* Pods_Lenna_chat_sdk_4.framework */; };
+		D0023BED2586E94900514796 /* MessageCarousel2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0023BEC2586E94900514796 /* MessageCarousel2.xib */; };
 		D038F4C9255D3A4300F20AC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F4C8255D3A4300F20AC5 /* AppDelegate.swift */; };
 		D038F4CB255D3A4300F20AC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F4CA255D3A4300F20AC5 /* SceneDelegate.swift */; };
 		D038F4CD255D3A4300F20AC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038F4CC255D3A4300F20AC5 /* ViewController.swift */; };
@@ -127,6 +128,7 @@
 		63BBA9447C6BBE8B29AB6CFA /* Pods-Lenna_chat_sdk_4Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lenna_chat_sdk_4Tests.release.xcconfig"; path = "Target Support Files/Pods-Lenna_chat_sdk_4Tests/Pods-Lenna_chat_sdk_4Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6638E0E762B298C6D4B6A74E /* Pods_Lenna_chat_sdk_4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lenna_chat_sdk_4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD5541D56342B3C3149C3A5 /* Pods-Lenna_chat_sdk_4Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lenna_chat_sdk_4Tests.debug.xcconfig"; path = "Target Support Files/Pods-Lenna_chat_sdk_4Tests/Pods-Lenna_chat_sdk_4Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D0023BEC2586E94900514796 /* MessageCarousel2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCarousel2.xib; sourceTree = "<group>"; };
 		D038F4C5255D3A4300F20AC5 /* Lenna_chat_sdk_4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lenna_chat_sdk_4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D038F4C8255D3A4300F20AC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D038F4CA255D3A4300F20AC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -503,6 +505,7 @@
 				D038F533255D3F6600F20AC5 /* ButtonCarousel.swift */,
 				D038F534255D3F6600F20AC5 /* CarouselViewCell.xib */,
 				D038F535255D3F6600F20AC5 /* MessageCarousel.xib */,
+				D0023BEC2586E94900514796 /* MessageCarousel2.xib */,
 			);
 			path = messageCarousel;
 			sourceTree = "<group>";
@@ -749,6 +752,7 @@
 			files = (
 				D038F5B2255D3F6800F20AC5 /* SF-Pro-Text-Regular.otf in Resources */,
 				D038F574255D3F6700F20AC5 /* BtnList.xib in Resources */,
+				D0023BED2586E94900514796 /* MessageCarousel2.xib in Resources */,
 				D038F586255D3F6700F20AC5 /* FormCell.xib in Resources */,
 				D038F597255D3F6700F20AC5 /* MessageGridCell.xib in Resources */,
 				D038F578255D3F6700F20AC5 /* ListCell.xib in Resources */,
@@ -1136,7 +1140,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = BDMCKR5737;
 				INFOPLIST_FILE = Lenna_chat_sdk_4/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -1157,7 +1161,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = BDMCKR5737;
 				INFOPLIST_FILE = Lenna_chat_sdk_4/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;

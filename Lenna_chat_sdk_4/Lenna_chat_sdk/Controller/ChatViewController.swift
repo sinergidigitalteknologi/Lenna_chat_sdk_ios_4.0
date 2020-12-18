@@ -1918,9 +1918,9 @@ extension ChatViewController : UICollectionViewDelegate, UICollectionViewDataSou
         }
         //
 //        micActive = true
-//        if self.player != nil && self.player.rate != 0{
-//            self.player!.pause()
-//        }
+        if self.player != nil && self.player.rate != 0{
+            self.player!.pause()
+        }
 //
         let audioSession = AVAudioSession.sharedInstance()
         do {

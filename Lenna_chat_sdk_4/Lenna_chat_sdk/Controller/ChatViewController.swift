@@ -123,6 +123,10 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
     
     override func viewWillDisappear(_ animated: Bool) {
         messageFromHome = ""
+        if self.player != nil && self.player.rate != 0{
+            self.player!.pause()
+        }
+        
     }
     
     override func viewDidLoad() {
@@ -1031,7 +1035,6 @@ class ChatViewController: UIViewController,  UITableViewDelegate,UITextFieldDele
                 }
                 
                 cell.selectionStyle = .none
-                
                 return cell
             }
                 
